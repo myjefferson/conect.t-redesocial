@@ -1,0 +1,174 @@
+/*Estilo do modal alterar foto*/
+div.modal-backdrop{
+  position: unset;
+}
+
+div.modal-content{
+  border: 1px solid #01FAA9;
+}
+
+div.modal-header, div.modal h5, div.modal-header span{
+  background: white;
+  color: #0E1020;
+  border: none;
+}
+
+div.modal-body{
+  background: #333347;
+}
+
+div.modal-body p{
+  color: white;
+}
+
+div.modal{
+  background: rgba(0,0,0,.5);
+}
+
+/*botoes do modal*/
+div.modal-footer button{
+  border-radius: 100px;
+}
+
+div.modal-footer{
+  margin: 0 0 0 0;
+}
+
+div.modal-footer .salvar{
+  background: #01FAA9;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+div.modal-footer .salvar:hover{
+  background: #14CE91;
+  box-shadow: none;
+  border-color:  none;
+}
+
+div.modal-footer .salvar:focus{
+border-color:  none;
+    box-shadow: none;
+}
+
+/*alterar perfil estilos*/
+div.modal-dialog{  
+  position: relative;
+  z-index: 1;
+}
+
+div.modal form input, div.modal form textarea{
+  background: white;
+  color: #0E1020;
+}
+
+div.modal form input:hover, div.modal form textarea:hover{
+  background: #0E1020;
+}
+
+div.modal form input:focus, div.modal form textarea:focus{
+  background: #0E1020;
+  box-shadow: none;
+  color: white;
+}
+
+div.modal form textarea{
+  min-height: 100px;
+  max-height: 300px;
+}
+
+/*molde FOTO DO PERFIL*/
+.align_center_add{
+  text-align: center;
+}
+
+#icon-foto-add{
+  z-index: 100;
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 23px 0 30px 0;
+  padding: 47px 63px 80px 63px;
+  border: 4px solid white;
+  border-radius: 200px;
+  font-size: 71px;
+  color: rgba(255,255,255, 0.9);
+  transition: 0.5s;
+}
+
+#icon-foto-add:hover{
+  background: rgba(0,0,0,.3);
+  transition: 0.5s;
+}
+
+label#add_text_foto{
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  left: 0;
+  right: 0;
+  top: 205px !important;
+}
+
+#foto_perfil_prev{
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+  height: 220px;
+  padding: 10px;
+  border: 4px solid white;
+  border-radius: 200px;
+  font-size: 71px;
+  color: rgba(255,255,255, 0.9);
+}
+
+a#outra_foto{
+  background: #E86400;
+  border: none;
+}
+
+a#outra_foto:hover{
+  background: #C95700;
+}
+
+.user-top input#foto{
+  border-radius: 100px;
+  position: absolute;
+  z-index: 5;
+  margin: -50px 40px;
+}
+
+/*molde da CAPA*/
+#icon-capa-add{
+  margin: 26px 0 0 0;
+  padding: 47px 63px 80px 63px;
+  border: 6px dashed white;
+  font-size: 71px;
+  width: 100%;
+  color: rgba(255,255,255, 0.9);
+}
+
+p#add_text_capa{
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  margin: -80px 0 96px 0;
+}
+
+#foto_capa_prev{
+  width: 100%;
+  height: 210px;
+  border: 6px dashed white;
+  padding: 10px;
+  margin: 0 0 0 0;
+}
+
+a#outra_capa{
+  background: #E86400;
+  border: none;
+}
+
+a#outra_foto:hover{
+  background: #C95700;
+}
