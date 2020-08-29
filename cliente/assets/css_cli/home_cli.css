@@ -1,0 +1,137 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  background-color: #234F68;
+}
+
+div#faixa-logo{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
+  background-color: #142B41;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #008EB0;
+}
+
+.container{
+  width: 970px;
+  margin: 70px auto;
+}
+
+/*Estilo: Criar publicacao*/
+aside#campos{
+  width: 474px;
+  height: 170px;
+  padding: 12px;
+  margin-bottom: 10px;
+  
+  background-color: #FCFCFC;
+  border-radius: 10px;
+  border: 2px solid #135B76;
+}
+
+aside#campos ul{
+  font-size: 15px;
+  width: 130px;
+  list-style: none;
+  float: right;
+  display: block;
+}
+
+aside#campos textarea{
+  font-family: Arial;
+  padding: 5px;
+  float: left;
+  resize: none;
+  width: 280px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+aside#campos a{
+  padding: 7px;
+  text-decoration: none;
+  background-color: #606060;
+  color: white;
+  border-radius: 10px;
+}
+
+/*Estilo: Conteudo dos posts*/
+session#container-posts{
+  float: left;
+  display: block;
+  width: 500px;
+  margin: 0 18px 0 235px;
+}
+
+
+/*Estilo: Postagens*/
+div#box-posts{
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #FCFCFC;
+  
+  border-radius: 10px;
+  border: 2px solid #135B76;
+}
+
+div#posts img{
+  width: 35px;
+  border-radius: 100px;
+}
+
+/*Estilo: Demandas globais*/
+session#feed-demandas-globais{
+  float: right;
+  position: fixed;
+  display: block;
+  width: 100px;
+  margin-left: 754px;
+  border: 2px solid #135B76;
+}
+
+session#feed-demandas-globais{
+  width: 200px;
+  height: 320px;
+  background-color: #FCFCFC;
+  
+  border-radius: 10px;
+  padding: 14px;
+}
+
+session#feed-demandas-globais p#title{
+  color: #234F68;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+session#feed-demandas-globais a{
+  text-decoration: none;
+}
+
+session#feed-demandas-globais a p{
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 100px; 
+  background-color: #1BB97A;
+}
+
+div#global_demds_minibox{
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+div#global_demds_minibox p{
+  font-weight: bold;
+  margin: 0px;
+}
+
+div#global_demds_minibox label{
+  font-size: 10pt;
+}
