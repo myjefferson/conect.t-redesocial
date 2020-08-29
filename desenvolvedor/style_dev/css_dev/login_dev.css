@@ -1,0 +1,190 @@
+body{
+  background: url("../img_dev/background-login-dev.png") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container{
+    margin-top: 110px;
+}
+
+h1 img{
+  position: absolute;
+  width: 160px;
+  top: 20px;
+  left: 30px;
+  animation-name: opaci;
+  animation-duration: 1.5s;
+}
+
+div h1 img, h2{;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 50px;
+
+}
+
+div h2{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+div h2{
+  font-family: Trebuchet MS, Arial;
+  margin-bottom: 10%;
+}
+
+.form-group input{
+  font-size: 110%;
+  margin-bottom: 20px;
+  background: #385581;
+  color: white;
+  padding: 22px 10px 24px 10px;
+  border: 1px solid #9FE2FF;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+}
+
+.form-group .form-control::placeholder{
+  color: #BCF4FF;
+}
+
+form .btn-primary{
+  font-size: 110%;
+  padding: 9px;
+  width: 100%;
+  background: #00C46F;
+  color: #1A253E;
+  font-weight: bold;
+  margin-top: 7%;
+  border: none;
+  box-shadow: 0px 4px 5px rgba(0,0,0,.1);
+}
+
+#btnEntrar:hover{
+  background: #12996C;
+  border: none;
+  overflow: none;
+}
+
+div p{
+  text-align: center;
+  color: #00C46F;
+  margin-top: 8%;
+}
+
+div .login-box a{
+  text-decoration: none;
+  width: max-content;
+}
+
+form #btn_cad p{
+  color: white;
+  margin-top: -10px;
+  width: 100%;
+  padding: 10px;
+  background: rgba(10,80,220,1);
+  border-radius: 4.5px;  
+  transition: 0.5s;
+  box-shadow: 0px 4px 5px rgba(0,0,0,.1);
+}
+
+form #btn_cad p:hover{
+  transition: 0.3s;
+  background: rgba(10,60,200,1);
+}
+
+form #btn_recSenha p{
+  text-align: left;
+  color: rgba(80,160,225,1);
+  margin-top: -15px;
+  width: max-content;
+}
+
+form #btn_recSenha{
+    width: max-content;
+}
+
+form #btn_recSenha p:hover{
+    color: rgba(80,195,225,1);
+}
+
+#text-footer{
+  font-size: 80%;
+  color: #6770C2;
+  bottom: 3%;
+  position: absolute;
+}
+
+.align-middle p a{
+  text-decoration: none;
+}
+
+.align-middle p a:hover{
+  color: rgba(20,175,250,1);
+}
+
+.login-box{
+  animation-name: slide;
+  animation-duration: 1s;
+  transition-timing-function: step-end;
+  position: absolute;
+  bottom: 3%;
+}
+
+/*ANIMAÇÕES*/
+/*opacidade logo*/
+@keyframes opaci{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 100%;
+  }
+}
+
+/*animacao slide (login e senha)*/
+@keyframes slide{
+  from{
+    opacity: 0;
+    margin-top: -150px
+  }to{
+    margin-left: 0;
+    opacity: 100%;
+  }
+}
+
+/*MEDIAS*/
+@media (max-width: 600px){
+  h1 img{
+    width: 160px;
+    margin-left: 26%;
+  }
+  #text-footer{
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px){
+  h1 img{
+    width: 160px;
+    margin-left: 23%;
+  }
+  #text-footer{
+    text-align: left;
+  }
+}
+
+@media (max-width: 2000px) and (max-height: 560px){
+  #text-footer{
+    text-align: left;
+    position: static;
+  }
+}
+
+@media (max-device-width: 2000px) and (max-device-height: 560px){
+  #text-footer{
+    text-align: center;
+    position: static;
+  }
+}

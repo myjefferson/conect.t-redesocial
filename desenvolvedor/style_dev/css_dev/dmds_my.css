@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#2C2C50 30%, #0C0E1C);
+    background-attachment: fixed;
+}
+
+.column-dmds{
+    margin-top: 100px;
+    display: block;
+    padding: 10px;
+    background: #46465E;
+    border-radius: 10px;
+}
+
+.principal_1, .principal_2{
+    margin-bottom: 20px;
+}
+
+.principal_1, .principal_2, .principal_3{
+    background: #1B1E21;
+    border-radius: 6px;
+}
+
+/*blocos de demanda - estilo*/
+.card-dmds{
+    margin: 5px;
+}
+
+#dmds-cards{
+    padding: 12px 12px 12px 12px;
+}
+
+#dmds-cards .card p{
+    color: black;
+    font-size: 15px;
+    margin: 0 0 0 10px;
+}
+
+/*Cores dos titulos - cabeçalho*/
+#dmds-head-text{
+    font-weight: bold;
+    font-size: 23px;
+    padding: 5px 0 2px 12px;
+}
+
+.head-box1{
+    background: #9200CF;
+    color: white;
+}
+
+.head-box2{
+    background: #DF5900;
+    color: white;
+}
+
+.head-box3{
+    background: #646464;
+    color: white;
+}
+
+.head-box1, .head-box2, .head-box3{
+     border-radius: 6px;
+}
+
+/*icones cabeçalho*/
+.pen, .block, .problem{
+    vertical-align: sub;
+    margin-top: 4px;
+    font-size: 26px;
+}
+
+/*nada encontrado - estilo*/
+#title-vazio{
+    color: #727272;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 15px 0 15px 0;
+}
+
+#title-vazio .info{
+    font-size: 33px;
+    vertical-align: text-top;
+}
+
+/*Informação adicional se nada encontrado*/
+.text-info{
+    margin-bottom: 16px;
+}
+
+#dmds-cards p{
+    color: white;
+    margin: 0 0 0 23px;
+    font-size: 20px;
+}
+
+#dmds-cards a{
+    color: #01FAA9;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#dmds-cards a:hover{
+    color: #00B87C;
+}
+
+#dmds-cards .search{
+    font-size: 23.4px;
+    vertical-align: sub;
+}
+
+#dmds-cards h2 + p{
+    border-top: 1px solid #3E3E57;
+    padding-top: 10px; 
+    margin: 13px 25px 0 25px;
+}
+
+@media (max-width: 770px){
+    .col-sm-6{
+        padding: 0;
+    }
+    
+    .column-dmds{
+        margin: 35px 0 85px 0;
+    }
+    
+    .card-dmds{
+      margin: 6px 0;  
+    }
+    
+    #dmds-head-text{
+        font-size: 22px;
+    }
+    
+    #title-vazio{
+        font-size: 20px;
+    }
+    
+    #title-vazio .info{
+        font-size: 27px;
+        vertical-align: text-bottom;
+    }
+    
+    #dmds-cards p{
+        font-size: 19px;
+    }
+    
+    #dmds-cards p a{
+        font-size: 20px;
+    }
+}

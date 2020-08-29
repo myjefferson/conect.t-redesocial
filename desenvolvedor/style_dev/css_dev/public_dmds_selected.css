@@ -1,0 +1,69 @@
+body{  
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#00648A 50%, #094860);
+    background-attachment: fixed;
+    font-family: Arial;
+  }
+  
+  div.container{
+    width: 970px;
+    margin: 70px auto;
+  }
+  
+  div#posicao-blocos{
+    margin-left: 235px;
+  }
+  
+  /*Estilo: bloco topo*/
+  div#bloco-topo{
+    float: left;
+    display: block;
+    padding: 10px;
+    width: 475px;
+    height: 170px;
+    background: white;
+    margin-bottom: 20px;
+  }
+  
+  /*Estilo: bloco descricao*/
+  div#block-descricao{
+    float: left;
+    display: block;
+    padding: 10px;
+    width: 475px;
+    height: 470px;
+    background: white;
+    margin-bottom: 20px;
+  }
+  
+  /*Estilo bloco enviar arquivo*/
+  div#block-enviar{
+    float: right;
+    display: block;
+    width: 220px;
+    height: 300px;
+    margin-left: 20px;
+    background: white;
+  }
+  
+  div#block-enviar h2{
+    font-size: 15px;
+    margin: 0;
+    padding: 10px 5px 0 5px;
+    height: 30px;
+    background: #888;
+    color: white;
+    text-align: center;
+  }
+  
+  div#block-enviar button{
+    border-radius: 100px;
+    border: none;
+    background: #00AA7C;
+    color: white;
+    font-size: 16px;
+    padding: 10px 70px;
+    margin: 0 0 0 17px;
+    cursor: pointer;
+  }

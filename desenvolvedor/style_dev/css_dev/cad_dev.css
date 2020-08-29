@@ -1,0 +1,144 @@
+body{
+  background: url(../img_dev/background-cad-dev.png) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container{
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.container-fluid img{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  animation-duration: 1.5s;
+}
+
+.container-fluid img{
+  color: white;
+  font-weight: bold;
+  margin-bottom: 50px;
+  width: 160px;
+}
+
+p#title{
+  color: white;
+  font-weight: bold;
+  font-size: 139%;
+  margin-bottom: 6%;
+}
+
+.form-group .form-control{
+  font-size: 110%;
+  margin-bottom: 16px;
+  background: #385581;
+  color: white; 
+  padding: 22px 10px 24px 10px;
+  border: 1px solid #9FE2FF;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+  outline-color: #385581;
+}
+
+.form-control::placeholder{
+  color: #BCF4FF;
+}
+
+.form-group input[type='date']{
+  padding: 10px 10px 10px 5px;
+  width: 46.3%;
+  margin-right: 12px;
+  height: 48px;
+  float: left;
+}
+.form-group .form-control[name="genero"]{
+  color: #9FE2FF;
+  padding: 0 0 0 5px;
+  height: 48px;
+  box-shadow: none;
+}
+
+.form-group .form-control[name="genero"]:focus{
+  background: #304C75;
+  box-shadow: none;
+}
+
+.form-group .form-control[name="genero"]:hover{
+  box-shadow: none;
+  background: #304C75;
+
+}
+
+.form-control{
+  color: #9FE2FF;
+}
+
+form div label{
+  color: white;
+}
+
+/*termos*/
+form div label a{
+  text-decoration: none;  
+  color: #00BFE6;
+}
+
+form div label a:hover{
+  text-decoration: none;
+  color: #00BFE6;
+}
+
+form .btn-primary, form .btn-primary:focus{
+  font-size: 110%;
+  padding: 9px;
+  width: 100%;
+  background: #01FAA9;
+  color: #1A253E;
+  font-weight: bold;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+form .btn-primary:hover{
+  background: #009B69;
+  border: none;
+  box-shadow: none;
+}
+
+form a#tenho_conta{
+  display: block;
+  color: #01FAA9;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*MEDIAS*/
+@media (max-width: 767px){
+  p#title{
+    text-align: center;
+    font-size: 23.5px;
+    margin-top: -38px;
+  }
+  
+  .container-fluid{
+    position: static;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .container-fluid img{
+    position: static;
+    margin: 25px 0 -30px 0px;
+    width: 160px;
+  }
+  
+  .container-fluid p{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}

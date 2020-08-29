@@ -1,0 +1,217 @@
+/*Estilo conteudo da postagem*/
+  .card #img_postador{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-right: 10px;
+    background: white;
+  }
+  
+  .name_post{
+    float: left;
+    font-size: 16px;
+    margin: -3px 0 -5px 0;
+    font-weight: bold;
+  }
+  
+  .data_post{
+    color: #BBB;
+    font-size: 14px;
+    margin: -7px 0 0 0;
+  }
+  
+  .cont-post{
+    padding: 2%;
+  }
+  
+  .cont-post img{
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0 8px 0;
+  }
+  
+  .btn-del-post{
+    float: right;
+    top: 0;
+    padding: 5px 8px 5px 8px;
+  }
+  
+  .block img{
+    width: 7%;
+    height: 2%;
+  }
+  
+  .card-header{
+    background-color: #4F4F67;
+  }
+  
+  /*Estilo rodapé*/
+  .card-footer{
+    background-color: #4F4F67;
+    padding: 25px 15px 0 15px;
+  }
+  
+  /*Estilo Comentários*/
+  .num-coments{
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .btn-mostrar-coments span, .btn-ocultar-coments span{
+    margin: 0;
+    font-size: 24px;
+    float: right;
+    transform: scaleX(-1);
+  }
+  
+  #block-btns-coments{
+    margin: -85px 0 0 0;
+    float: right;
+  }
+  
+  .btn-ocultar-coments, .btn-mostrar-coments{
+    border-radius: 100px;
+  }
+  
+  .card-footer .text-coment{
+    margin-top: 2px;
+    resize: none;
+    width: max-content;
+    border-radius: 100px;
+    float: left;
+  }
+  
+  a.btn-comentar{
+    border-radius: 100px;
+    padding: 9px 8px 3px 10px;
+    margin-left: 8px;
+  }
+  
+  .card-footer a#btn-comentar{
+    margin-left: 10px;
+    border-radius: 100px;
+  }
+  
+/*Corpo comentarios*/
+.icon-sem-coment{
+  vertical-align: text-top;
+  margin-right: 7px;
+  font-size: 27px;
+}
+
+.text-nenhum-coment{
+  text-align: center;
+  margin: 5px 0 5px 0;
+  font-size: 17px;
+  color: #999;
+  font-weight: bold;
+}
+
+#area_comentario{
+  margin-top: -40px;
+  margin-bottom: 12px;
+  float: right;
+}
+
+.body-coments{
+  margin: 17px 0 13px 0;
+  padding: 10px;
+  background: #0E1020;
+  border-radius: 10px;
+}
+
+#img_postador_coment{
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  float: left;
+  background: white;
+}
+
+#block-coment{
+  margin: 5px 0 5px 30px;
+  padding: 8px;
+  border-radius: 0 20px 20px 20px;
+  width: max-content;
+  max-width: 75%;
+  background: #58585C;
+}
+
+#name{
+  margin: -5px 0 0 0;
+  font-weight: bold;
+}
+
+#text-coment{
+  margin: 0;
+}
+
+/*Estilo do like*/
+label.text_likes{
+  font-weight: bold;
+}
+
+i.n_gostei{
+  display: block;
+  color: #999;
+  border: 2px solid #999;
+  width: 70px;
+  text-align: center;
+  border-radius: 100px;
+  padding: 6px 6px 6px 6px;
+  margin: 0 0 -8px -10px;
+}
+
+i.gostei{
+  color: #01FAA9;
+  display: block;
+  background-color: #003B33;
+  width: 70px;
+  text-align: center;
+  border-radius: 100px;
+  border: 2px solid #01FAA9;
+  padding: 6px 6px 6px 6px;
+  margin: 0 0 -8px -10px;
+}
+
+/*MEDIAS*/
+@media (max-width: 770px){
+  .col-sm-12{
+    padding: 0;
+  }
+  
+  i.gostei{
+    color: #01FAA9;
+    display: block;
+    background-color: #003B33;
+    width: 60px;
+    vertical-align:-moz-middle-with-baseline;
+    border-radius: 100px;
+    border: 2px solid #01FAA9;
+    padding: 6px 6px 6px 6px;
+    margin: 0 0 -7px -10px;
+  }
+  
+  i.n_gostei{
+    display: block;
+    color: #999;
+    border: 2px solid #999;
+    width: 60px;
+    text-align: center;
+    border-radius: 100px;
+    padding: 6px 6px 6px 6px;
+    margin: 0 0 -7px -10px;
+  }
+  
+  #posts{
+    margin-bottom: 85px;
+  }
+  
+  .card-footer .text-coment{
+    resize: none;
+    width: 190px;
+    border-radius: 100px;
+    font-size: 15px;
+  }
+}

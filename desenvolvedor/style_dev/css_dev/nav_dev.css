@@ -1,0 +1,49 @@
+.logo img{
+  width: 55%;
+  margin-top: 15px;
+  margin-left: 12px;
+}
+
+div#usuario, a{
+  font-weight: bold;
+  color: #E2E2E2;
+}
+
+ul li a img{
+  vertical-align: bottom;
+  width: 27px;
+  border-radius: 100px;
+  margin: 50px 2px 0px -3px;
+}
+
+.options{
+  width: 34%;
+}
+
+div#usuario a{
+  border-radius: 100px;
+}
+
+div#usuario a, li{
+  list-style: none;
+}
+
+div#usuario li{
+  margin: 0 0 5px -25px;
+  font-size: 20px;
+}
+
+div#usuario li:nth-last-child(2){
+  margin-bottom: 60px;
+  padding-bottom: 70px; 
+  border-bottom: 1px solid #DFDFDF;
+}
+
+li .glyphicon{
+  padding-right: 5px;
+}
+
+li i{
+  padding-right: 1px;
+  vertical-align: text-bottom;
+}

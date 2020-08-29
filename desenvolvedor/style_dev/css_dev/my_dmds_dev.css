@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#2C2C50 30%, #0C0E1C);
+    background-attachment: fixed;
+}
+
+.principal{
+    margin-bottom: 5%;
+}
+
+.float-right{
+    padding: 0.5%;
+    width: 74%;
+}
+
+.card-box-top{
+    margin-top: 20px;
+    margin-bottom: 3%;
+    background: #3E3E57;
+}
+
+.card-box-top ul li{
+    display: inline;
+    margin-left: 10px;
+    width: 20%;
+}
+
+/*Fundo cabeçalhos e titulos*/
+.head-box1, #dmds-atv{
+    background: #06556D;
+    font-weight: bold;
+    color: #75FFA3;
+    padding: 4px;
+}
+
+.head-box2, #dmds-pds{
+    background: #915300;
+    color: #FFDD6E;
+    font-weight: bold;    padding: 4px;
+}
+
+.head-box3, #cldo-cli{
+    background: #500000;
+    color: #FD8888;
+    font-weight: bold;
+    padding: 4px;
+}
+
+#dmds-cards{
+    background: #3E3E57;
+    padding: 1%;
+}
+
+#dmds-cards .card{
+    margin: 1%;
+    width: 30.8%;
+    background: #4F4F67;
+    padding: 10px;
+    border: 1px solid #75FFA3;
+    box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+}
