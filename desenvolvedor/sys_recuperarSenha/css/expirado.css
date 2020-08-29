@@ -1,0 +1,136 @@
+/*Estilo do documento expirado*/
+#timeout div{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#timeout div span{
+  background: #1D2225;
+  padding: 7px 11px 15px 11px;
+  border-radius: 100px;
+  color: #FF3737;
+  font-size: 75px;
+  margin: -290px 0 0 0;
+}
+
+#timeout div img{
+  margin: -105px 0 0 0;
+  width: 240px;
+}
+
+#timeout div label{
+  margin: -111px 0 0 10px;
+  font-size: 55px;
+  font-weight: bold;
+  color: #606060;
+}
+
+#timeout p, #timeout h1{ 
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+#timeout h1#title{
+  border-top: 1px solid #FF7C19;
+  font-weight: bold;
+  margin: 58px 0 0 0;
+  padding: 10px;
+}
+
+#timeout p#text1{
+  font-size: 20px;
+  margin: 160px 0 0 0;
+}
+
+#timeout p#text2{
+  font-size: 20px;
+  margin: 210px 0 0 0;
+}
+
+#timeout #fundo a{
+  color: #00FFA9;
+}
+
+footer ul{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  background: rgba(0,0,0,0.2);
+  padding: 15px;
+}
+
+footer ul li{
+  display: inline;
+  margin: 0 15px 0 20px;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: #707070;
+}
+
+footer ul li a:hover{
+  text-decoration: none;
+  color: #909090;
+}
+
+@media (max-width: 660px){
+  #timeout div span{
+    font-size: 50px;
+    margin: -280px 0 0 0;
+  }
+  
+  #timeout div img{
+    margin: -166px 0 0 0;
+    width: 146px;
+  }
+
+  #timeout div label{
+    margin: -170px 0 0 10px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #606060;
+  }
+  #timeout h1#title{
+    border-top: 1px solid #FF3737;
+    font-weight: bold;
+    margin: -46px 0 0 0;
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  #timeout p#text1{
+    padding: 5px;
+    font-size: 15px;
+    margin: 40px 0 0 0;
+  }
+  #timeout p#text2{
+    padding: 5px;
+    font-size: 15px;
+    margin: 110px 0 0 0;
+  }
+}
+
+@media (max-width: 740px) or (max-height: 400px){ 
+  footer ul{
+    z-index: 0;
+    text-align: center;
+  }
+  
+  footer ul li{
+    display: block;
+    text-align: left;
+  }
+  
+  footer ul li{
+    font-size: 15px;
+  }
+}
