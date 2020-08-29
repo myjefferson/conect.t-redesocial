@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#2C2C50 30%, #0C0E1C);
+    background-attachment: fixed;
+}
+
+.column-dmds{
+    margin: 96px 0 15px 0;
+    display: block;
+    padding: 10px 10px 2px 10px;
+    background: #46465E;
+    border-radius: 10px;
+}
+
+.box_project{
+    display: block;
+    background-color: #1B1E21;
+    padding-bottom: 12px;
+    margin-bottom: 17px;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #75FFA3;
+    transition: 0.2s;
+}
+
+.box_project:hover{
+    box-shadow: 0px 0px 5px #75FFA3;
+    background-color: #24282B;
+    transition: 0.2s;
+}
+
+#demds_link{
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/*fontes - das demandas*/
+.box_project .name{
+    font-size: 25px;
+    margin-bottom: -18px;
+    padding: 0 0 2px 45px; 
+    border-radius: 10px 10px 10px 10px;
+    background: #2C3E40;
+}
+
+.box_project .titulo, .box_project .pag{
+    padding-left: 13px;
+    margin: 0;  
+}
+
+.box_project img{
+    float: left;
+    width: 37px;
+    padding: 5px;
+    margin: 2.2px;
+    border-radius: 100px;
+}
+/*MEDIA*/
+
+@media (max-width: 770px){
+    .column-dmds{
+        margin: 85px 0 85px 0;
+    }
+}

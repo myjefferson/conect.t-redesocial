@@ -1,0 +1,105 @@
+body {
+            background: url("../imgs_store/background-loja.png") no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Open Sans' !important;
+        }
+        
+        .page-header,
+        h2 {
+            font-family: 'Open Sans' !important;
+        }
+        
+        .navbar-brand,
+        .text-logo {
+            font-family: 'Open Sans' !important;
+        }
+        
+        p,
+        .caption h4,
+        label,
+        table,
+        .panel,
+        #contactpage > h2.success,
+        #contactpage h2.error {
+            font-size: 14px !important;
+        }
+        
+        h2 {
+            font-size: 30px !important;
+        }
+        
+        .navbar-brand,
+        .text-logo {
+            font-size: 18px !important;
+        }
+        
+        .navbar-left a {
+            font-size: 14px !important;
+        }
+
+        /*body{
+            background: url("imgs_store/background-loja.png") no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }*/
+
+        .fotoProduto{
+            width: 230px;
+            height: 145px;
+            float: right;
+            border: solid #01FAA9 2px;
+            border-radius: 8px;
+        }
+
+        .mainProdutos{
+            width: 79%;
+            height: 145px;
+            border: solid #01FAA9 1px;
+            border-radius: 8px;
+        }
+
+        .nomeProduto{
+            float: right;
+            width: 773px;
+            height: 40px;
+
+        }
+
+        .descricaoProduto{
+            width: 877px;
+            height: 60px; 
+            float: right;
+        }
+
+        .emailProduto{
+            width: 440px;
+            height: 45px;
+            margin: 0 auto; 
+            float: right;
+        }
+
+        .telefoneProduto{
+            width: 434px;
+            height: 45px;
+            float: left;
+        }
+
+        .precoProduto{
+            float: left;
+            width: 101px;
+            height: 40px;
+        }
+
+        .publicarProduto{
+            color: white;
+            margin-top: 5px;
+            font-weight: bold;
+            position: relative;
+            z-index: 200;
+            float: right;
+            color: white;
+            margin: 11px 20px 10px 10px;
+            padding: 0 0 3px 0;
+            text-decoration: none;
+        }

@@ -1,0 +1,103 @@
+body{
+  background: url("../img_cli/background-login-cli.png") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container{
+  margin-top: 5%;
+}
+
+.container-fluid img{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  animation-name: opaci;
+  animation-duration: 1.5s;
+}
+
+@keyframes opaci{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 100%;
+  }
+}
+
+div h1 img, h2{;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 50px;
+  width: 11%;
+}
+
+div h2{
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+div h2{
+  font-family: Trebuchet MS, Arial;
+  margin-bottom: 10%;
+}
+
+.form-group input{
+  font-size: 110%;
+  margin-bottom: 20px;
+  background: white;
+  color: white;
+  padding: 22px 10px 24px 10px;
+  border: 1px solid #9FE2FF;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+}
+
+form .btn-primary{
+  font-size: 110%;
+  padding: 9px;
+  width: 100%;
+  background: #7D26CD;
+  color: white;
+  font-weight: bold;
+  margin-top: 7%;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+}
+
+div p{
+  text-align: center;
+  text-decoration: none;
+  color: #7D26CD;
+  margin-top: 8%;
+}
+
+label{
+  font-size: 80%;
+  color: #6770C2;
+  bottom: 3%;
+  position: absolute;
+}
+
+div.col-md-4{
+  display: block;
+  margin-top: 6%;
+  float: right;
+}
+
+.col-md-4{
+  animation-name: slide;
+  animation-duration: 1s;
+  transition-timing-function: step-end;
+  position: absolute;
+  bottom: 3%;
+}
+
+/*Animação*/
+
+@keyframes slide{
+  from{
+    opacity: 0;
+    margin-top: -150px
+  }to{
+    margin-left: 0;
+    opacity: 100%;
+  }
+}

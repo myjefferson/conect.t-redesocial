@@ -1,0 +1,68 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+div.conteudo{
+  width: 800px;
+  margin: 0 auto;
+}
+
+.head-app{
+  background: #666;
+  padding: 10px;
+  color: white;
+}
+
+.head-app img{
+  width: 100px;
+  display: block;
+  float: left;
+  margin: 10px 15px 0 5px;
+  border-radius: 10px;
+}
+
+#title{
+  font-family: Arial;
+  margin: 6px;
+  font-size: 22px;
+}
+
+.content-app{
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #606060;
+  color: white
+}
+
+.moredesc span{
+  display: none;
+  transition: 1s;
+  
+}
+
+.morelink{
+  display: block;
+
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  
+  width: 100px;
+  padding: 10px 10px 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/*Estrelas*/
+.estrelas input[type=radio]{
+  display: none;
+}
+.estrelas label i.fa:before{
+  content: '\f005';
+  color: #FC0;
+}
+.estrelas input[type="radio"]:checked ~ label i.fa:before{
+  color: #ccc;
+}

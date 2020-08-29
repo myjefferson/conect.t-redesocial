@@ -1,0 +1,25 @@
+ul li{
+    background: #606060;
+    display: inline-block;
+    margin-right: 10px; 
+    padding: 5px;
+}
+
+ul li,ul li img,ul li #baixar p{
+    border-radius: 10px;
+}
+
+ul li img{
+    width: 130px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+ul li #baixar p{
+    text-align: center;
+    padding: 5px 40px;
+    background: #444;
+}

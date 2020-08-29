@@ -1,0 +1,4 @@
+body{
+    white-space: nowrap; /*impede a quebra de linha (impede ser "responsivo")*/
+}
+

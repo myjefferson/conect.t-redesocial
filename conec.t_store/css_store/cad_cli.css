@@ -1,0 +1,70 @@
+body{
+  background: url(../img_cli/background-cadastro-cli.png) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container{
+  margin-top: 6%;
+}
+
+.container-fluid img{
+  margin-top: -95px;
+  margin-right: 12px;
+  animation-duration: 1.5s;
+}
+
+div h1 img{
+  color: white;
+  font-weight: bold;
+  margin-bottom: 50px;
+  width: 11%;
+}
+
+p#title{
+  color: white;
+  font-weight: bold;
+  font-size: 170%;
+  margin-bottom: 6%;
+}
+
+.form-group .form-control{
+  font-size: 110%;
+  margin-bottom: 16px;
+  background: white;
+  color: white;
+  padding: 22px 10px 24px 10px;
+  border: 1px solid #9FE2FF;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+  outline-color: #385581;
+}
+
+
+form .btn-primary{
+  font-size: 110%;
+  padding: 9px;
+  width: 100%;
+  background: #7D26CD;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+}
+
+a p{
+  color: #7D26CD;
+  margin-top: 15px;
+  text-align: center;
+}
+
+::placeholder {
+  color: red;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: red;
+}
+
+::-ms-input-placeholder {
+  color: red;
+}

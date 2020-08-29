@@ -1,0 +1,208 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(white);
+  background-attachment: fixed;
+}
+
+.card{
+  color: white;
+  margin: 20px 0 20px 0;
+  background-color: #1E2326;
+  border-radius: 5px;
+}
+
+.carousel-inner{
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #00FFAC;
+}
+
+h5, .carousel-caption p{
+  text-shadow: 0px 0 10px 40px black;
+}
+
+textarea.form-control{
+  resize: none;
+}
+
+/*btn - foto*/
+#foto{
+  margin: -1px  10px 0 -6%;
+  float: left;
+  border-radius: 100px;
+}
+
+/*Visualização da foto*/
+form #img-post{
+  padding: 10px;
+  margin: -20px 0 14px 0;
+  border-radius: 18px;
+}
+
+.card-postar form  img{
+  width: 100%;
+}
+
+/*btn deletar foto*/
+#delete-img{
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
+#delete-img span{
+  font-size: 35px;
+  opacity: 80%;
+  transition: 0.4s;
+  background: rgba(255,0,0,0.6);
+  border-radius: 100px;
+}
+
+#delete-img span:hover{
+  transition: 0.3s;
+  opacity: 95%;
+  border-radius: 100px;
+  
+}
+
+/*btn - postar*/
+#btn-postar{
+  margin: 2%;
+  margin-top: -3%;
+  float: right;
+}
+
+#pub-btn-right{
+  margin-top: -10px;
+}
+
+.card-header label{
+  font-size: 20px;
+  margin: 0;
+}
+
+/*Estilo conteudo da postagem*/
+.card #img_postador{
+  float: left;
+  width: 40px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+.name_post{
+  float: left;
+  font-size: 16px;
+  margin: -3px 0 -5px 0;
+  font-weight: bold;
+}
+
+.data_post{
+  color: #BBB;
+  font-size: 14px;
+  margin: -7px 0 0 0;
+}
+
+.cont-post{
+  padding: 2%;
+}
+
+.cont-post img{
+  border-radius: 0;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-del-post{
+  float: right;
+  top: 0;
+  padding: 5px 8px 5px 8px;
+}
+
+.block img{
+  width: 7%;
+  height: 2%;
+}
+
+.card-header{
+  background-color: #4F4F67;
+}
+
+/*Estilo Demandas globais - lado direito*/
+.demandas-atuais{
+  margin-left: 10px;
+  padding-left: 50px; 
+}
+
+.demandas-atuais .position-fixed{
+  top: 0px;
+  display: block;
+  height: max-content;
+  padding: 10px 10px 15px 10px;
+  background: #3E3E57;
+  border-radius: 0px 0px 6px 6px;
+}
+
+.demandas-atuais #title{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+  padding: 4px 0 15px 0;
+}
+
+#dmds-atual{
+  background-color: #1B1E21;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#demds_link{
+    text-decoration: none;
+}
+
+#ver_mais_demandas p{
+  width: 200px;
+  padding: 5px;
+  border-radius: 100px;
+  border: 2px solid  #00FFAC;
+  text-align: center;
+  font-weight: bold;
+  color: #00FFAC;
+  margin: 0;
+  transition: 0.5s;
+}
+
+#dmds-atual .name{
+  margin: 0;
+  color: #1B1E21;
+  font-weight: bold;
+  background-color: #CFCFCF;
+  border-radius: 10px 10px 10px 10px;
+  padding-left: 8px; 
+}
+
+#dmds-atual .project{
+  padding: 8px 6px 7px 6px;
+  color: white;
+}
+
+#ver_mais_demandas{
+  text-decoration: none;
+}
+
+#ver_mais_demandas p:hover{
+  background: #00FFAC;
+  color: #1B1E21;
+  transition: 0.5s;
+}
+
+@media (max-width: 770px){
+  .demandas-atuais{
+    display: none;
+  }
+  
+  .carousel-inner{
+    margin-bottom: 85px;
+  }
+}
