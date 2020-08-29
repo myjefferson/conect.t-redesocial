@@ -1,0 +1,232 @@
+body{
+  background: linear-gradient(#EFFBFF 31%, #EFFBFF 31%, #FFF5FF 15%, #FFF5FF 59%, #132D5D 40%, #132D5D 85%);
+}
+
+.conteudo{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header{
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: rgba(239,251,255,0.95);
+  top: 0px;
+  padding: 17px;
+  z-index: 2;
+  
+  animation-direction: normal;
+  animation-name: header;
+  animation-duration: 1s;
+}
+
+@keyframes header{
+  from{
+    top: -60px;
+  }to{
+    top: 0px;
+  }
+}
+
+h1 img{
+  float: left;
+  width: 250px;
+  margin: 13px 0 0 34px;
+}
+
+a{
+  float: right;
+}
+
+#iniciarsessao{
+  margin: 11px 36px 0 0;
+  text-decoration: none;
+  color: white;
+  border-radius: 100px;
+  padding: 11px;
+  font-family: Arial;
+  background-color: #0597F2;
+  transition: 0.7s;
+}
+
+#iniciarsessao:hover{
+  margin-top: 10px;
+  transition: 0.4s;
+  border-color: #087CD4;
+  box-shadow: 0px 0px 15px #94E6FF;
+  font-size: 18px;
+  padding: 11px;
+  
+}
+
+#criarconta{
+  margin: 11px 7px;
+  color: #0597F2;
+  padding: 10px;
+  text-decoration: none;
+  font-family: Arial;
+  transition: 0.7s;
+  border-radius: 100px;
+}
+
+#criarconta:hover{
+  transition: 0.5s;
+  font-size: 16.7px;
+  margin-top: 9px;
+  border-radius: 100px;
+  padding: 11px;
+}
+
+section.parte1 img{
+  float: right;
+  margin: 20px -5px 0 0;
+  width: 43%;
+}
+
+aside#chat{
+  width: 520px;
+}
+
+
+
+.parte1 em{
+  font-weight: bold;
+}
+
+.parte1 aside p{
+  font-size: 25px;
+  font-family: Arial;
+  color: white;
+}
+
+.parte1 aside p#balao01{
+  font-size: 30px;
+  margin: 130px 7px 35px 5px; 
+  background-color: #72ACFB;
+  padding: 20px;
+  border-radius: 100px 100px 100px 10px; 
+}
+
+.parte1 aside p#balao02{
+  margin: 10px 0px 35px 195px;
+  padding: 30px;  
+  background-color: #2E3192;
+  padding: 20px;
+  border-radius: 100px 100px 10px 100px;
+  text-align: right;
+}
+
+.parte1 aside p#balao03{
+  margin: 0 200px 35px 5px; 
+  background-color: #72ACFB;
+  padding: 20px 0 20px 20px;
+  border-radius: 100px 100px 100px 10px;
+}
+
+.parte1 aside p#balao04{
+  margin: 10px 0px 50px 180px;
+  padding: 30px;  
+  background-color: #2E3192;
+  padding: 20px;
+  border-radius: 100px 100px 10px 100px;
+  text-align: right;
+}
+
+section.parte2 figure, img{
+  margin: 55px 0 0 80px;
+  float: left;
+  width: 355px;
+}
+
+#meio p{
+  color: #DA4346;
+  font-size: 33px;
+  font-family: Arial;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#meio figure figcaption, figure img{
+  font-family: Arial;
+  text-align: center;
+  font-size: 20px;
+  color: #333333;
+  margin: 0px 0 30px 0;
+}
+
+section.parte3 #chat{
+  margin-top: 70px;
+}
+
+.parte3 figure img{
+  width: 480px;
+  margin: 120px 0 60px -50px; 
+  float: left;
+}
+
+.parte3 #chat{
+  float: right;
+  font-family: Arial;
+  font-size: 25px;
+  color: white;
+}
+
+.parte3 #chat p:first-child{
+  color: white;
+  font-size: 30px;
+  margin-left: -420px;
+}
+
+.parte3 #chat p{
+  margin-bottom: 45px;
+}
+
+.parte3 p#balao01{
+  padding: 20px;
+  background-color: #0075AE;
+  border-radius: 100px 100px 0px 100px;
+  margin: 0 0 50px 150px;
+}
+
+.parte3 p#balao02{
+  color: #132D5D;
+  padding: 20px;
+  background-color: white;
+  border-radius: 100px 100px 100px 0px;
+  margin: 0 10px 50px 0px;
+}
+
+.parte3 p#balao03{
+  padding: 20px;
+  background-color: #0075AE;
+  border-radius: 100px 100px 0px 100px;
+  margin: 0 0 30px 130px;
+}
+
+footer, footer p{
+  clear: both;
+  padding: 90px;
+  background-color: #ccc;
+  color: #2E3192;
+  font-family: Arial;
+  text-align: center;
+}
+
+/*ANIMAÇÔES*/
+[data-anima]{
+  opacity: 0;
+  transition: .7s;
+}
+[data-anima="esquerda"]{
+  transform: translate3d(-50px,0,0);/*x,y,z*/
+}
+[data-anima="direita"]{
+  transform: translate3d(50px,0,0);/*x,y,z*/
+}
+[data-anima].animacao{
+  opacity: 1;
+  z-index: 1;
+  transform: translate3d(0,0,0);
+}

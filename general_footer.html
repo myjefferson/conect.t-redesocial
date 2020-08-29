@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="style_index/footer.css">
+<footer>
+    <div data-anima="slideDown">
+        <img src="icones/logo.png" alt="CONEC.T">
+        <ul>
+            <li><a href="cliente/login_cli.php">Entrar como cliente</a></li>
+            <li><a href="desenvolvedor/login_dev.php">Entrar como desenvolvedor</a></li>    
+            <li><a href="index.php">Sobre a CONEC.T</a></li>
+        </ul>
+        <p data-anima="slideDown">&copy 2020 - CONEC.T, TODOS OS DIREITOS RESERVADOS - Jefferson Carvalho dos Santos, Lucas Gabriel Antunes, Rubens Felipe</p>
+    </div>
+</footer>
+
+<!--ANIMAÇÃO JS-->
+<script>
+    const elementos = document.querySelectorAll('[data-anima]');
+    const animacaoClass = 'animacao';
+
+    function animaScroll(){
+        const topoPaginaJanela = window.pageYOffset + ((window.innerHeight*3)/4); // 3/4 da janela
+        elementos.forEach(function(elemento){
+            if(topoPaginaJanela > elemento.offsetTop){
+                elemento.classList.add(animacaoClass)
+            }
+        })
+    }
+
+    if(elementos.length){
+        window.addEventListener('scroll',function(){
+            animaScroll();
+        })
+    }
+</script>

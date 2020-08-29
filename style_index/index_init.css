@@ -1,0 +1,271 @@
+body{
+  background: white;
+}
+
+header{
+  z-index: 100;
+  transition: 0.5s;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  
+  animation-direction: normal;
+  animation-name: header;
+  animation-duration: 1s;
+}
+
+.fixarMenu{
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.222);
+  transition: 0.5s;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 70px;
+  background: white;
+  top: 0px;
+  z-index: 100;
+  
+  animation-direction: normal;
+  animation-name: header;
+  animation-duration: 1s;
+}
+
+.fixarMenu a#iniciarsessao{
+  color: #444;
+}
+
+.fixarMenu a#iniciarsessao:hover{
+  color: #444;
+  border-bottom: 1px solid black;
+}
+
+.fixarMenu a#criarconta:hover{
+  color: #444;
+}
+
+@keyframes header{
+  from{
+    top: -60px;
+  }to{
+    top: 0px;
+  }
+}
+
+h1 img{
+  position: absolute;
+  z-index: 100;
+  float: left;
+  width: 160px;
+  margin: 6.5px 0 0 34px;
+}
+
+a#criarconta{
+  position: relative;
+  z-index: 200;
+  float: right;
+  margin: 2px 40px 0 0;
+  text-decoration: none;
+  color: #444;
+  border-radius: 100px;
+  padding: 10px;
+  font-size: 15.5px;
+  background-color: #01FAA9;
+  transition: 0.5s;
+  font-weight: bold;
+  border: 2px solid #01FAA9;
+}
+
+a#criarconta:hover{
+  background: none;
+  color: #01FAA9;
+}
+
+a#iniciarsessao{
+  font-weight: bold;
+  position: relative;
+  z-index: 200;
+  float: right;
+  color: white;
+  margin: 11px 20px 10px 10px;
+  padding: 0 0 3px 0;
+  text-decoration: none;
+}
+
+a#iniciarsessao:hover{
+  border-bottom: 1px solid white;
+}
+
+/*Estilos do video*/
+video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 80%;
+  overflow: hidden;
+}
+
+div.principal-video{
+  position: relative;
+  top: 0;
+  box-shadow: inset 0px 0px 0px 0px black;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+div.principal-video .container{
+  z-index: 2;
+  position: relative;
+}
+
+/*Conteudo*/
+.container{
+  margin-top: 0px;
+  width: 100%;
+}
+
+.box-client p, .box-dev p{
+  font-size: 20px;
+}
+
+.box-dev p + p, .box-client p + p{
+  margin-bottom: 35px;
+}
+
+.box-dev p, .box-client p{
+  text-align: justify;
+}
+
+.box-dev h1#title, .box-client h1#title{
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.img-client, .box-client{
+  float: left; 
+}
+
+#conheca, #cadastre{
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px 10px 15px;
+}
+
+#conheca{ 
+  background: #00B7E6;
+  color: white;
+  margin-right: 10px;
+}
+
+#cadastre{
+  background: #01FAA9;
+  color: #333333;
+}
+
+.img-dev, .box-dev{
+  float: left;
+}
+
+.principal-client img{
+  width: 420px;
+  margin: 0 15px 0 10px;
+}
+
+.principal-dev img{
+  width: 390px;
+  margin: 0 15px 0 40px;
+}
+
+.principal-dev, .principal-client, .principal-video{
+  margin-bottom: 100px;
+  color: #555555;
+  font-family: Trebuchet MS, Arial;
+}
+
+/*MEDIA*/
+@media (max-width: 600px){
+  
+  /*Responsividade: Cabeçalho*/
+  header{
+    height: 60px;
+  }
+  
+  header img{
+    margin: 3px 0 0 0;
+    width: 140px;
+  }
+  
+  a#iniciarsessao{
+    font-size: 15px;
+    margin: 10px 10px 3px 3px;
+  }
+  a#criarconta{
+    font-size: 14px;
+    padding: 8px 5px 8px 5px;
+    margin: 3px 0 0 0;
+  }
+  
+  /*Responsividade: Conteudo*/
+  .principal-client img{
+    width: 270px;
+    margin-left: 20%;
+  }
+  
+  .principal-dev img{
+    width: 240px;
+    margin-left: 20%;
+  }
+  
+  .principal-client h1#title, .principal-dev h1#title{
+    font-size: 25px;
+    width: max-content;
+    text-align: center;
+  }
+  
+  .principal-client p, .principal-dev p{
+    font-size: 15px;
+  }
+  
+  #link-infos{
+    width: max-content;
+  }
+  
+  #conheca{
+    padding: 6px;
+    margin-top: -6px;
+  }
+  
+  #cadastre{
+    padding: 6px;
+    width: 200px;
+  }
+  
+  footer p{
+    font-size: 12px;
+  }
+  
+  [data-anima]{
+    transition: .6s;
+  }
+  
+  [data-anima="slideEsquerda"]{
+    opacity: 1;
+    transform: none;
+  }
+  [data-anima="slideDireita"]{
+    opacity: 1;
+    transform: none;
+  }
+}

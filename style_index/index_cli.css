@@ -1,0 +1,216 @@
+/*header*/
+body{
+    background: white;
+}
+
+body header{
+    padding: 20px;    
+}
+
+.principal-screen{
+    height: 100vh;
+}
+
+.principal-screen .text-left p{
+    font-size: 50px;
+    margin: -21px 0 0 -10px;
+    color: #9A9A9A;
+    font-weight: bold;
+}
+
+.principal-screen h1{
+    font-size: 35px;
+    margin-left: 20px;
+    color: #2E2E2E;
+}
+
+.principal-screen b{
+    color: #00BFE6;
+}
+
+/*Cliente*/
+.principal-screen #bol-cli{
+    color: #2A2A2A;
+}
+
+.principal-screen label{
+    font-weight: bold;
+    color: #00BFE6;
+}
+
+
+/*CONHEÇA MAIS*/
+#more{
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 100%;
+}
+
+#more p#icon_more{
+    text-align: center;
+    margin: 0;
+    font-size: 15px;
+}
+
+#more p#icon_more span{
+    font-size: 30px;
+    color: #666;
+}
+
+#more p#txt_more{
+    margin:  580px 0 0 0;
+    text-align: center;
+    color: #555;
+}
+
+
+header{
+    z-index: 100;
+    transition: 0.5s;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+header img{
+    width: 170px;
+}
+
+header div#link-ancora{
+    margin-top: -53px;
+    float: right;
+}
+
+header a#criarconta_dev{
+    float: right;
+    padding: 9px;
+    border-radius: 100px;
+    background: #01FAA9;
+    color: #444;
+    text-decoration: none;    
+    transition: 0.4s;
+    border: 2px solid #01FAA9;
+    font-weight: bold;
+}
+
+header a#criarconta_dev:hover{
+    background: none;
+    text-decoration: none;
+}
+
+header a#paraClientes{
+    float: left;
+    color: #2A2A2A;
+    text-decoration: none;
+    margin: 10px 20px 20px 20px;
+}
+
+header a#paraClientes:hover{
+    border-bottom: 1px solid black;
+}
+
+/*Menu fixo*/
+.fixarMenu{
+    margin: 0;
+    transition: 0.5s;
+    padding: 9px 9px 9px 9px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    background: white;
+    width: 100%;
+    left: 0;
+    z-index: 100;
+}
+
+.mais-top{
+    margin-top: 130px;
+}
+
+.text-left{
+    margin-top: 50px;
+}
+
+.principal-screen .img-right{
+    width: 55%;
+}
+
+/*SESSION - 1*/
+.session-1{
+    padding: 50px;
+    height: 550px;
+}
+
+.session-1 .img_position{
+    float: right;
+    width: 100%;
+}
+
+.session-1 div #icon_text, .session-2 div #icon_text{
+    text-align: center;
+}
+
+.session-1 div #icon_text img{
+    width: 100px;
+    margin: 35px 0 0 0;
+}
+
+.session-1 div h2{
+    margin-top: 6%;
+    color: #6B00E6;
+    text-align: center;
+    font-weight: bold;
+}
+
+.session-1 div p#text, .session-2 div p#text{
+    font-size: 19px;
+    text-align: center;
+}
+
+/*SESSSAO 2*/
+.session-2{
+    height: 460px;
+}
+
+.session-2 div #icon_text img{
+    width: 85px;
+}
+
+.session-2 h2{
+    color: #236CFF;
+    margin-top: 6%;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*SESSION FINAL*/
+.session-final{
+    height: 270px;
+    padding: 40px;
+}
+
+.session-final p{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.session-final a{
+    background: #01FAA9;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    border-radius: 100px;
+    border: 2px solid #01FAA9;
+    color: black;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.session-final a:hover{
+    transition: 0.5s;
+    background: none;
+    color: black;
+    text-decoration: none;
+}

@@ -1,0 +1,151 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  height: 100vh;
+}
+
+.bem-vindo{
+  margin: 40px 0 0 0;
+  font-size: 26px;
+  font-weight: bold;
+  color: #55A4FF;
+}
+
+#logo{
+  width: 250px;
+  margin: 0;
+}
+
+#img-illustra{
+  width: 100%;
+}
+
+#line-01 p#txt-covid{
+  font-size: 24px;
+  color: #EB4747;
+  margin: 16vh 0 0 0;
+}
+
+#line-01 p#txt-covid + p{
+  font-size: 21px;
+  color: #EB4747;
+  font-weight: bold;
+  margin: 0px 0 0 0;
+}
+
+#line-01 .float-right img{
+  margin-top: 30px;
+}
+
+#btn_cli, #btn_dev{
+  width: 200px;
+  color: white;
+  background: #0090FF;
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: 0.6s;
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
+}
+
+#btn_dev{
+  float: left;
+  width: 350px;
+  text-align: center;
+}
+
+#btn_dev:hover, #btn_cli:hover{
+  transform:  scale(110%);
+  -webkit-transform: scale(1.1);
+  transition: 0.4s;
+}
+
+#btn_cli{
+  float: left;
+  margin-right: 40px;
+  width: 350px;
+  text-align: center;
+}
+
+.container #line-02{
+  margin: 15px auto;
+  text-align: center;
+}
+
+#txt-type-conta{
+  text-align: center;
+  height: min-content;
+  font-size: 25px;
+  color: #55A4FF;
+  font-weight: bold;
+}
+
+@media (max-width: 1000px){
+  .bem-vindo{
+    font-size: 22px;
+  }
+  
+  #logo{
+    width: 200px;
+  }
+  #line-01 p#txt-covid{
+    font-size: 19px;
+  }
+
+  #line-01 p#txt-covid + p{
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 700px){
+  .bem-vindo{
+    margin: 10px 0 0 0;
+    font-size: 22px;
+  }
+
+  #img-illustra{
+
+  }
+
+  #logo{
+    width: 200px;
+  }
+  #line-01 p#txt-covid{
+    font-size: 19px;
+    margin: 0;
+    text-align: center;
+  }
+
+  #line-01 p#txt-covid + p{
+    font-size: 19px;
+    text-align: center;
+  }
+  
+  .obj-center{
+    text-align: center;
+  }
+  
+  #line-02 div{
+    padding: 20px;
+  }
+  
+  #btn_cli, #btn_dev{
+    width: 100%;
+    font-size: 20px;
+    padding: 13px;
+  }
+  
+  #btn_cli:hover, #btn_dev:hover{
+    
+    transform: none;
+    -webkit-transform: none;
+  }
+  
+  #btn_dev{
+    margin-top: 20px;
+  }
+}
