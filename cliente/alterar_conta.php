@@ -238,7 +238,7 @@
 function altera_foto_perfil(){
     include("../conexao_banco.php");
     $foto_perfil = $_FILES['foto_perfil'];
-    $id_cli = $_SESSION['id'];
+    $id_cli = $_SESSION['id_cli'];
 
     if(!empty($foto_perfil)){
         $n = rand(0, 1000000);
@@ -252,7 +252,7 @@ function altera_foto_perfil(){
         $extensao = strtolower($extensao);
         //Aceita apenas estas extensões de imagem
         if(strstr('.jpg;.jpeg;.png;.bmp', $extensao)){
-            $query = 'UPDATE cliente SET foto = "'.$nome_foto.'" WHERE id = "'.$id_cli.'"';     
+            $query = 'UPDATE cliente SET foto = "'.$nome_foto.'" WHERE id_cli = "'.$id_cli.'"';     
             if(mysqli_query($conexao, $query))
             {
                 header("Location: perfil_cli.php");
@@ -279,7 +279,7 @@ function altera_foto_perfil(){
 function altera_capa_perfil(){
     include("../conexao_banco.php");
     $foto_capa = $_FILES["foto_capa"];
-    $id_cli = $_SESSION['id'];
+    $id_cli = $_SESSION['id_cli'];
 
     if(!empty($foto_capa)){
         $n = rand(0, 1000000);
@@ -294,7 +294,7 @@ function altera_capa_perfil(){
 
         //Aceita apenas estas extensões de imagem
         if(strstr('.jpg;.jpeg;.png;.bmp', $extensao)){
-            $query = 'UPDATE cliente SET ft_capa = "'.$nome_capa.'" WHERE id = "'.$id_cli.'"';     
+            $query = 'UPDATE cliente SET ft_capa = "'.$nome_capa.'" WHERE id_cli = "'.$id_cli.'"';     
             if(mysqli_query($conexao, $query))
             {
                 header("Location: perfil_cli.php");
@@ -321,7 +321,7 @@ function altera_capa_perfil(){
 function altera_perfil(){
     include("../conexao_banco.php");
 
-    $id_cli = $_SESSION['id'];
+    $id_cli = $_SESSION['id_cli'];
     $senha = $_POST['senha'];
     $senha_nova = $_POST['senha_nova'];
     $senha_nova_n = $_POST['senha_nova_n'];
@@ -338,14 +338,14 @@ function altera_perfil(){
             echo"As senha não estão iguais!";
         }
         else{    
-            $query = mysqli_query($conexao, 'UPDATE cliente SET senha = "'.md5($senha_nova_n).'" WHERE id = "'.$id_cli.'"');   
+            $query = mysqli_query($conexao, 'UPDATE cliente SET senha = "'.md5($senha_nova_n).'" WHERE id_cli = "'.$id_cli.'"');   
             echo"Senha alterada com sucesso!"; 
             $refresh;                                                                        
         }      
     }
 
     if(!empty($descricao)){
-        $query = mysqli_query($conexao, 'UPDATE cliente SET descricao = "'.$descricao.'" WHERE id = "'.$id_cli.'"');   
+        $query = mysqli_query($conexao, 'UPDATE cliente SET descricao = "'.$descricao.'" WHERE id_cli = "'.$id_cli.'"');   
         echo"Descrição alterada com sucesso!";  
         $refresh;
     }

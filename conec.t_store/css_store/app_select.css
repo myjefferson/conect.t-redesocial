@@ -3,36 +3,78 @@ body{
   padding: 0;
 }
 
-div.conteudo{
-  width: 800px;
-  margin: 0 auto;
+/*Backgrounds*/
+.background-downlaod{
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  background: #C5C2FE;
+  padding: 15px;
 }
 
+.backgroud-head{
+  position: relative;
+  left: 0;
+  width: 100vw;
+  background: #E6DFFF;
+}
+
+/*info head-app*/
 .head-app{
-  background: #666;
-  padding: 10px;
+  height: max-content;
+  margin: 78px 0 0 0;
   color: white;
 }
 
 .head-app img{
-  width: 100px;
+  width: 120px;
   display: block;
   float: left;
   margin: 10px 15px 0 5px;
   border-radius: 10px;
+  background: #A112FF;
 }
 
-#title{
-  font-family: Arial;
-  margin: 6px;
-  font-size: 22px;
+.head-app #title{
+  color: #404040;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.content-app{
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #606060;
-  color: white
+.head-app p#title-dev{
+  color: #4E0081;
+  font-size: 14.5px;
+}
+
+
+/*Buttons download*/
+.background-downlaod div #buttons-download{
+  float: right;
+}
+
+.background-downlaod button#list-desire {
+  background: white;
+  color: #A112FF;
+  border: 2px solid #A112FF;
+  margin-right: 10px;
+}
+
+.background-downlaod button#download{
+  background: #A112FF;
+  border: 2px solid white;
+}
+
+.background-downlaod button#list-desire, .background-downlaod button#download{
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+/*avaliacao*/
+#avaliacao{
+  float: right;
 }
 
 .moredesc span{
@@ -41,28 +83,22 @@ div.conteudo{
   
 }
 
-.morelink{
-  display: block;
-
-  background-color: blue;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  
-  width: 100px;
-  padding: 10px 10px 10px;
-  margin-top: 10px;
-  border-radius: 10px;
-}
-
-/*Estrelas*/
+/*Estrelas e botão*/
 .estrelas input[type=radio]{
   display: none;
 }
 .estrelas label i.fa:before{
-  content: '\f005';
-  color: #FC0;
+  content: '★';
+  font-style: normal;
+  font-size: 23px;
+  color: #980BF5;
 }
 .estrelas input[type="radio"]:checked ~ label i.fa:before{
-  color: #ccc;
+  color: #A4A4A4;
+}
+
+#avaliacao input{
+  background: #A112FF;
+  border: 2px solid white;
+  width: 100%;
 }

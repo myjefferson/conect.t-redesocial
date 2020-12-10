@@ -10,7 +10,7 @@
     $query_select = mysqli_query($conexao, "SELECT * FROM postagens WHERE id_post = ".$id_postagem."");
     $lista = mysqli_fetch_array($query_select);
 
-    $query_coment = mysqli_query($conexao, "SELECT count(id) as qtde FROM comentarios WHERE post = ".$id_postagem."");
+    $query_coment = mysqli_query($conexao, "SELECT count(id) as qtde FROM comentarioscli WHERE post = ".$id_postagem."");
     $coment_load = mysqli_fetch_assoc($query_coment);
     $num_coments = $coment_load['qtde'];
 

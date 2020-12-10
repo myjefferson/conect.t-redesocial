@@ -4,35 +4,34 @@
 function postar_programa(){
     include("../conexao_banco.php");
 
-    $id_dev = $_SESSION['id'];
+    $id_dev = $_SESSION['id_dev'];
     $nome_dev = $_SESSION['nome'];
-    $img_icone = $_FILES['img_icone'];
-    $titulo = $_POST['titulo'];
+    $imagePrincipal = $_FILES['imagePrincipal'];
+    $titulo = $_POST['title'];
     $site = $_POST['site'];
     $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
     $descricao = $_POST['descricao'];
     $preco = $_POST['preco'];
 
     if(!empty($_POST['plataforma'] && count($_POST['plataforma']))){
 
         //icone
-        $n = strtolower(substr($_FILES['img_icone']['name'], -4));
+        $n = strtolower(substr($_FILES['imagePrincipal']['name'], -4));
         $icone = md5(time()).$n;
-        move_uploaded_file($_FILES['img_icone']['tmp_name'], "icons_store/".$icone);
+        move_uploaded_file($_FILES['imagePrincipal']['tmp_name'], "icons_store/".$icone);
 
         //programa
-        $ext = strtolower(substr($_FILES["prog"]["name"], -4));
-        $prog_name = md5(time()).$ext;
-        move_uploaded_file($_FILES['prog']['tmp_name'], "progs_store/".$prog_name);
+        $ext = strtolower(substr($_FILES["software"]["name"], -4));
+        $software_name = md5(time()).$ext;
+        move_uploaded_file($_FILES['software']['tmp_name'], "posts_software_store/".$software_name);
 
         $plataforma = implode(',',$_POST['plataforma']);
 
-        $sql = "INSERT INTO programas_loja (id_dev, titulo, `site`, email, telefone, plataforma, descricao, preco, icone, arc_windows, nome_dev) VALUES ('$id_dev','$titulo','$site','$email','$telefone','$plataforma','$descricao','$preco', '$icone', '$prog_name', '$nome_dev')";
+        $sql = "INSERT INTO programas_loja (id_dev, titulo, `site`, email, plataforma, descricao, preco, icone, arc_windows, nome_dev) VALUES ('$id_dev','$titulo','$site','$email','$plataforma','$descricao','$preco', '$icone', '$prog_name', '$nome_dev')";
         
         if(mysqli_query($conexao, $sql)){
             echo"Sucesso";
-            header("Location: store_initial.php");
+            header("Location: my_publishs.php");
         }else{
             echo"Erro";
         }
@@ -44,8 +43,8 @@ function postar_programa(){
 //Apaga o programa -- manutenção
 function apagar_programa(){
     include("../conexao_banco.php");
-    mysqli_query($conexao, "DELETE FROM programas_loja WHERE id = ".$_GET['prog']." and id_dev = ".$_SESSION['id']." ") or die("Erro ao excluir, por favor tente novamente mais tarde!");
-    header("Location: store_mypublics.php");
+    mysqli_query($conexao, "DELETE FROM programas_loja WHERE id = ".$_GET['prog']." and id_dev = ".$_SESSION['id_dev']." ") or die("Erro ao excluir, por favor tente novamente mais tarde!");
+    header("Location: my_publishs.php");
 }
 
 //Funcao de avaliar programa (em testes)
@@ -71,8 +70,5 @@ function avaliacao_programa() {
     }*/
     
 }
-
-
-
 
 ?>

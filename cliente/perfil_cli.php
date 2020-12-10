@@ -2,12 +2,7 @@
     $query_user = mysqli_query($conexao, 'SELECT * FROM cliente WHERE id_cli = "'.$id_cli.'"');
     $cli_select = mysqli_fetch_assoc($query_user);
     
-    /*if($cli_select['foto'] == ""){
-        $foto_perfil = $cli_select['foto'];
-    }else{
-        $foto_perfil = "../icones/sem-perfil.png";
-    }*/
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

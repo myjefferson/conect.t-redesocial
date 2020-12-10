@@ -25,7 +25,7 @@
                             <li class="nav-item"><a name="perfil" href='perfil_cli.php' class='nav-link' id="perfil"><?php echo "<img src='fotos_cli/".$foto_cli['foto']."' onerror=this.src='style_cli/img_cli/sem-perfil.png'>"; ?> Meu Perfil</a></li>
                             <li class="nav-item"><a name="home" href="../cliente/home_cli.php" class="nav-link"> <i class="large material-icons">home</i> Página inicial</a></li>
                             <li class="nav-item"><a name="mensagens" href="../cliente/mensagens_cli.php" class="nav-link"> <i class="large material-icons">forum</i> Mensagens</a></li>
-                            <li class="nav-item"><a name="loja" href="../conec.t_store/store_inicial.php" class="nav-link"> <i class="large material-icons">shop</i> Loja</a></li>                         
+                            <li class="nav-item"><a name="loja" href="../conec.t_store/index_store.php" class="nav-link"> <i class="large material-icons">shop</i> Loja</a></li>                         
                             <li class="nav-item"><a name="sair" href="../cliente/sair.php" class="nav-link" id="sair"><i class="large material-icons">exit_to_app</i> Sair</a></li>                         
                         </ul>
                     </nav>

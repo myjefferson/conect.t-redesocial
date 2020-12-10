@@ -8,8 +8,13 @@ body{
 .card{
   color: white;
   margin: 20px 0 20px 0;
-  background-color: #1E2326;
+  background-color: #168BFA;
   border-radius: 5px;
+}
+
+.card-header{
+  color: white;
+  background-color: #168BFA !important;
 }
 
 .carousel-inner{
@@ -27,21 +32,23 @@ textarea.form-control{
 }
 
 /*btn - foto*/
+#img-post{
+  border-radius: 3%;
+  width: 100%;
+  margin: -10px 0 22px 0;
+  padding: 0 10px 0 10px;
+}
+
 #foto{
   margin: -1px  10px 0 -6%;
   float: left;
   border-radius: 100px;
+  background: #076DD9;
+  border: none;
 }
 
-/*Visualização da foto*/
-form #img-post{
-  padding: 10px;
-  margin: -20px 0 14px 0;
-  border-radius: 18px;
-}
-
-.card-postar form  img{
-  width: 100%;
+#foto:hover{
+    background: #075BD9;
 }
 
 /*btn deletar foto*/
@@ -71,6 +78,12 @@ form #img-post{
   margin: 2%;
   margin-top: -3%;
   float: right;
+  background: #076DD9;
+  border: none;
+}
+
+#btn-postar:hover{
+  background: #075BD9;
 }
 
 #pub-btn-right{
@@ -83,13 +96,6 @@ form #img-post{
 }
 
 /*Estilo conteudo da postagem*/
-#dev_text{
-  float: right;
-  margin-top: -30px;
-  font-weight: bold;
-  color: #888;
-}
-
 .card #img_postador{
   float: left;
   width: 40px;
@@ -112,6 +118,7 @@ form #img-post{
 
 .cont-post{
   padding: 2%;
+  background: #075BD9;
 }
 
 .cont-post img{
@@ -129,10 +136,6 @@ form #img-post{
 .block img{
   width: 7%;
   height: 2%;
-}
-
-.card-header{
-  background-color: #4F4F67;
 }
 
 /*Estilo Demandas globais - lado direito*/

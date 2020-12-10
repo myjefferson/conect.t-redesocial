@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <?php include("lib/itens_head.php"); ?>
-    <link rel="stylesheet" href="assets/css_cli/mensagens_cli.css">
+    <link rel="stylesheet" href="style_cli/css_cli/mensagens_cli.css">
     <script type="text/javascript" src="js_config/sys_chat.js"></script>
 </head>
     <body name="mensagens">

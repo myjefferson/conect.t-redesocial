@@ -1,3 +1,11 @@
+<?php
+    //Redirecionamento de página
+    function redirect(){
+        $page_name = $_GET['page'];
+        header("Location: ".$page_name."");
+    }
+?>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js_config/like_unlike.js"></script>  
 <link rel="stylesheet" href="style_cli/css_cli/estl_posts.css">
@@ -107,6 +115,7 @@
                 <div class='cont-post'>
                     <?php echo$post["texto"]; ?><br/><!--Textos-->
                     <img class="img-post" src="postagens_cli/<?php echo$post['imagem']; ?>" onerror=this.style.display="none"><br>
+                    <img class="img-post" src="../desenvolvedor/postagens_dev/<?php echo$post['imagem']; ?>" onerror=this.style.display="none"><br>
                 </div>
                 
                 <!--FOOTER - Likes e Comentarios-->
@@ -177,11 +186,6 @@
                                 $cli_com_query = mysqli_query($conexao, "SELECT * FROM cliente WHERE id_cli = ".$com['id_cli']."");
                                 $cli_com = mysqli_fetch_array($cli_com_query);
 
-                                if($com['id_cli']){
-                                    $cli_com["foto"];
-                                    $cli_com['nome'];
-                                }
-
                                 echo"<img src='fotos_cli/".$cli_com["foto"]."' id='img_postador_coment' onerror=this.src='style_cli/img_cli/sem-perfil.png'>";
                                 ?>
                                 <div id="block-coment">
@@ -227,17 +231,15 @@ if(!function_exists("deletar_postagem")){
     function deletar_postagem(){
         include("../conexao_banco.php");
         $post_id = $_GET['delete_post'];
-        $page_name = $_GET['page'];
         $id_cli = $_SESSION['id_cli'];
 
         $delete_post = mysqli_query($conexao, "DELETE FROM postagens WHERE id_post = '$post_id' AND id_cli = '$id_cli'");
         $delete_likes = mysqli_query($conexao, "DELETE FROM likes WHERE post = '$post_id'");
         $delete_coments = mysqli_query($conexao, "DELETE FROM comentarioscli WHERE post = '$post_id'");
-        if($delete_post){
-            header("Location: ".$page_name."");
+        if($delete_post && $delete_likes && $delete_coments){   
+            redirect();
         }else{
-            //echo"<h3>Erro</h3>";
-            header("Location: ".$page_name."");
+            redirect();
         }
     }
 

@@ -25,7 +25,7 @@
                             <li class="nav-item"><a name="home" href="../desenvolvedor/home_dev.php" class="nav-link"> <i class="large material-icons">home</i> Página inicial</a></li>
                             <li class="nav-item"><a name="mensagens" href="../desenvolvedor/mensagens_dev.php" class="nav-link"> <i class="large material-icons">forum</i> Mensagens</a></li>
                             <li class="nav-item"><a name="desenvolver" href="../desenvolvedor/dmds_main.php" class="nav-link"> <i class="large material-icons">view_list</i> Desenvolver</a></li>
-                            <li class="nav-item"><a name="loja" href="../conec.t_store/store_inicial.php" class="nav-link"> <i class="large material-icons">shop</i> Loja</a></li>                         
+                            <li class="nav-item"><a name="loja" href="../conec.t_store/index_store.php" class="nav-link"> <i class="large material-icons">shop</i> Loja</a></li>                         
                             <li class="nav-item"><a name="sair" href="../desenvolvedor/sair.php" class="nav-link" id="sair"><i class="large material-icons">exit_to_app</i> Sair</a></li>                         
                         </ul>
                     </nav>
@@ -46,7 +46,7 @@
                         <li><a href="../desenvolvedor/mensagens_dev.php"><i name="mensagens-mobile" class="large material-icons nav-link">forum</i></a><p>Mensagens</p></li>
                         <li><a href="../desenvolvedor/home_dev.php"><i name="home-mobile" class="large material-icons nav-link">home</i></a><p>Página inicial</p></li>
                         <li><a href="../desenvolvedor/dmds_main.php"><i name="dev-mobile" class="large material-icons nav-link">view_list</i></a><p>Desenvolver</p></li>
-                        <li><a href="../conec.t_store/store_initial.php"><i name="loja-mobile" class="large material-icons nav-link">shop</i></a><p>Loja</p></li>                        
+                        <li><a href="../desenvolvedor/conec.t_store/loja_cli.php"><i name="loja-mobile" class="large material-icons nav-link">shop</i></a><p>Loja</p></li>                        
                     </ul>
                 </div> 
             </nav>

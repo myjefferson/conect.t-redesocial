@@ -16,7 +16,7 @@
   }
   
   .data_post{
-    color: #BBB;
+    color: #E8E8E8;
     font-size: 14px;
     margin: -7px 0 0 0;
   }
@@ -45,10 +45,17 @@
   .card-header{
     background-color: #1E2326;
   }
+
+  #dev_text{
+    float: right;
+    margin-top: -30px;
+    font-weight: bold;
+    color: #0636D4;
+  }
   
   /*Estilo rodapé*/
   .card-footer{
-    background-color: #1E2326;
+    background: #168BFA;
     padding: 25px 15px 0 15px;
   }
   
@@ -117,7 +124,7 @@
 .body-coments{
   margin: 17px 0 13px 0;
   padding: 10px;
-  background: #0E1020;
+  background: #033054;
   border-radius: 10px;
 }
 
@@ -154,8 +161,8 @@ label.text_likes{
 
 i.n_gostei{
   display: block;
-  color: #999;
-  border: 2px solid #999;
+  color: white;
+  border: 2px solid white;
   width: 70px;
   text-align: center;
   border-radius: 100px;
@@ -164,13 +171,13 @@ i.n_gostei{
 }
 
 i.gostei{
-  color: #01FAA9;
+  color: #0AC9FD;
   display: block;
-  background-color: #003B33;
+  background-color: #033054;
   width: 70px;
   text-align: center;
   border-radius: 100px;
-  border: 2px solid #01FAA9;
+  border: 2px solid #0AC9FD;
   padding: 6px 6px 6px 6px;
   margin: 0 0 -8px -10px;
 }
@@ -182,21 +189,21 @@ i.gostei{
   }
   
   i.gostei{
-    color: #01FAA9;
+    color: #0AF5FD;
     display: block;
-    background-color: #003B33;
+    background-color: #033054;
     width: 60px;
     vertical-align:-moz-middle-with-baseline;
     border-radius: 100px;
-    border: 2px solid #01FAA9;
+    border: 2px solid #0AF5FD;
     padding: 6px 6px 6px 6px;
     margin: 0 0 -7px -10px;
   }
   
   i.n_gostei{
     display: block;
-    color: #999;
-    border: 2px solid #999;
+    color: white;
+    border: 2px solid white;
     width: 60px;
     text-align: center;
     border-radius: 100px;

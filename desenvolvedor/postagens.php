@@ -1,3 +1,11 @@
+<?php
+    //Redirecionamento de página
+    function redirect(){ 
+        $page_name = $_GET['page']; 
+        header("Location: ".$page_name.""); 
+    }
+?>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js_config/like_unlike.js"></script>  
 <link rel="stylesheet" href="style_dev/css_dev/estl_posts.css">
@@ -89,16 +97,16 @@
                                 }
 
                                 if($user_dev['id_dev']){
-                                    //FOTO DO POSTADOR CLI ?>
-                                    <img src="fotos_dev/<?php echo$user_dev["foto"]; ?>" id="img_postador" onerror="this.src='style_dev/img_dev/sem-perfil.png">
+                                    //FOTO DO POSTADOR DEV ?>
+                                    <img src="fotos_dev/<?php echo$user_dev["foto"]; ?>" id="img_postador" onerror="this.src='style_dev/img_dev/sem-perfil.png'">
                                     <p class="name_post"><?php echo$user_dev['nome']; ?></p></br>
 
         
                                 <?php } 
-                            }else{ //FOTO DO POSTADOR DEV ?>
-                                <img src="../desenvolvedor/fotos_dev/<?php echo$user_cli["foto"]; ?>" id="img_postador" onerror="this.src='style_dev/img_dev/sem-perfil.png'">
+                            }else{ //FOTO DO POSTADOR CLI ?>
+                                <img src="../cliente/fotos_cli/<?php echo$user_cli["foto"]; ?>" id="img_postador" onerror="this.src='style_dev/img_dev/sem-perfil.png'">
                                 <p class="name_post"><?php echo$user_cli['nome']; ?></p></br>
-                                <p id="client_text">User Cliente</p>
+                                <p id="client_text">Cliente</p>
 
                         <?php } ?> 
 
@@ -110,6 +118,7 @@
                 <div class='cont-post'>
                     <?php echo$post["texto"]; ?><br/><!--Textos-->
                     <img class="img-post" src="postagens_dev/<?php echo$post['imagem']; ?>" onerror=this.style.display="none"><br>
+                    <img class="img-post" src="../cliente/postagens_cli/<?php echo$post['imagem']; ?>" onerror=this.style.display="none"><br>
                 </div>
                 
                 <!--FOOTER - Likes e Comentarios-->
@@ -224,17 +233,15 @@ if(!function_exists("deletar_postagem")){
     function deletar_postagem(){
         include("../conexao_banco.php");
         $post_id = $_GET['delete_post'];
-        $page_name = $_GET['page'];
         $id_dev = $_SESSION['id_dev'];
 
         $delete_post = mysqli_query($conexao, "DELETE FROM postagens WHERE id_post = '$post_id' AND id_dev = '$id_dev'");
         $delete_likes = mysqli_query($conexao, "DELETE FROM likes WHERE post = '$post_id'");
         $delete_coments = mysqli_query($conexao, "DELETE FROM comentarios WHERE post = '$post_id'");
-        if($delete_post){
-            header("Location: ".$page_name."");
+        if($delete_post && $delete_likes && $delete_coments){
+            redirect();
         }else{
-            //echo"<h3>Erro</h3>";
-            header("Location: ".$page_name."");
+            redirect();
         }
     }
 

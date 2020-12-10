@@ -6,12 +6,12 @@
     <title>CONEC.T SUPPORT - Recuperação de conta</title>
     <link rel="icon" type="imagem/png" href="../../icones/conec.t-icon-head-web.png">
     <link rel="stylesheet" href="./css/sysPassword.css" type="text/css">
-    <link rel="stylesheet" href="../style_cli/materialize/icons_materialize.css"> 
-    <link rel="stylesheet" href="../style_cli/css_cli/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../../lib/materialize/icons_materialize.css"> 
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css" type="text/css">
 
-    <script type="text/javascript" src="../style_cli/js/jquery_ajax_2.1.3.min.js"></script>
-    <script type="text/javascript" src="../style_cli/js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="../style_cli/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../lib/bootstrap/js/jquery_ajax_2.1.3.min.js"></script>
+    <script type="text/javascript" src="../../lib/bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../../lib/bootstrap/js/bootstrap.min.js"></script>
 </head>
     <body>
         <div id="recuperar">

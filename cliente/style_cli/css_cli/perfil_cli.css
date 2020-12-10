@@ -210,11 +210,15 @@ i:hover{
   opacity: 100%;
 }
 
+div.card-header{
+  background: #168BFA;
+}
+
 div.card{
   position: relative;
   color: white;
   margin: 20px 0 20px 0;
-  background-color: #1E2326;
+  background-color: #168BFA;
   border-radius: 5px;
   outline: none;
 }
