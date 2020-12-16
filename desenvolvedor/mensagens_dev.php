@@ -42,10 +42,10 @@
                                             $id_talking = $_GET['user'];
 
                                             //SELECT DEV
-                                            $query_user_dev = mysqli_query($conexao, "SELECT * FROM desenvolvedor WHERE type_user = '$type_talking' AND id_dev = '$id_talking'");
+                                            $query_user_dev = $conexao->query("SELECT * FROM desenvolvedor WHERE type_user = '$type_talking' AND id_dev = '$id_talking'");
                                             
                                             //SELECT CLI
-                                            $query_user_cli = mysqli_query($conexao, "SELECT * FROM cliente WHERE type_user = '$type_talking' AND id_cli = '$id_talking'");
+                                            $query_user_cli = $conexao->query("SELECT * FROM cliente WHERE type_user = '$type_talking' AND id_cli = '$id_talking'");
                                             if(mysqli_num_rows($query_user_dev) != 0 && $type_talking = "dev"){
                                                 $user_talking_dev = mysqli_fetch_assoc($query_user_dev);
                                                 ?>
@@ -96,7 +96,7 @@
                                 
                                     <?php 
                                         //SELECT DEV
-                                        $seleciona_dev = mysqli_query($conexao, "SELECT * FROM desenvolvedor");
+                                        $seleciona_dev = $conexao->query("SELECT * FROM desenvolvedor");
                                         while($row = mysqli_fetch_array($seleciona_dev)){
                                             if($row['id_dev'] != $_SESSION['id_dev'] && $row['email'] != $_SESSION['email']){
                                                 $nome = $row['nome'];
@@ -106,7 +106,7 @@
                                                 if($row['type_user'] == "dev"){ ?>
                                                     <ul>                                     
                                                         <!--Pega o id do usuario atual-->
-                                                        <li><a id="user_select" href="?&type_user=<?php echo$row['type_user']; ?>&user=<?php echo$row['id_dev']; ?>"><b><img src="fotos_dev/<?php echo$foto; ?>" onerror=this.src="style_dev/img_dev/sem-perfil.png"><?php echo $nome; ?></b></a></li>  
+                                                        <li><a id="user_select" href="?&type_user=<?php echo$row['type_user']; ?>&user=<?php echo$row['id_dev']; ?>"><b><img src="fotos_dev/<?php echo$foto; ?>" onerror=this.src='style_dev/img_dev/sem-perfil.png'><?php echo $nome; ?></b></a></li>  
                                                     </ul>
                                                 <?php } 
                                             }

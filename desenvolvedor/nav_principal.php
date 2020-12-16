@@ -2,7 +2,7 @@
     $id_dev = $_SESSION['id_dev'];
     //Se o user não tiver logado - ir para login
     if($id_dev == ""){header("Location: Login_dev.php");} 
-    $query_user = mysqli_query($conexao, 'SELECT nome, foto, descricao FROM desenvolvedor WHERE id_dev = "'.$id_dev.'"');
+    $query_user = $conexao->query('SELECT nome, foto, descricao FROM desenvolvedor WHERE id_dev = "'.$id_dev.'"');
     $foto_dev = mysqli_fetch_assoc($query_user);?>
 <!--Menu do topo-->
 <!DOCTYPE html>

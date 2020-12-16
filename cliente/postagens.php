@@ -70,7 +70,7 @@
     if($todos_posts = mysqli_num_rows($resultados) > 0){         
         
         //Carregamento das postagens
-        while($post = mysqli_fetch_array($resultados)){ 
+        while($post = $resultados->fetch_assoc()){ 
             $id_post = $post['id_post']; ?>
             
             <!--HEAD - cabeçalho da postagem-->
@@ -82,12 +82,12 @@
                     ?>
                     <div class='block'> 
                         <?php //VERIFICA FOTO DOS POSTS
-                        $check_query_cli = mysqli_query($conexao, 'SELECT * FROM postagens P, cliente C WHERE C.id_cli = '.$post['id_cli'].'');
-                        $user_cli = mysqli_fetch_assoc($check_query_cli);
-
-                        $check_query_dev = mysqli_query($conexao, 'SELECT * FROM postagens P, desenvolvedor D WHERE D.id_dev = '.$post['id_dev'].'');
-                        $user_dev = mysqli_fetch_assoc($check_query_dev);
-
+                        $check_query_cli = $conexao->query('SELECT * FROM postagens P, cliente C WHERE C.id_cli = '.$post['id_cli'].'') or die();
+                        $user_cli = $check_query_cli->fetch_assoc();
+                        
+                        $check_query_dev = $conexao->query('SELECT * FROM postagens P, desenvolvedor D WHERE D.id_dev = '.$post['id_dev'].'') or die();
+                        $user_dev = $check_query_dev->fetch_assoc();
+                        
                         if($id_cli == $post['id_cli']){
                             //APAGAR POSTAGEM
                             if($id_cli == $user_cli['id_cli']){                      

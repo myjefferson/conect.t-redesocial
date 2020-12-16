@@ -56,7 +56,7 @@
                                             $senha = mysqli_real_escape_string($conexao, $_POST['senha']);               
                                             $senha = md5($_POST['senha']);
                                 
-                                            $nome_sql = mysqli_query($conexao, "SELECT id_dev, nome, foto FROM desenvolvedor WHERE email = '$email' AND senha = '$senha'");
+                                            $nome_sql = mysqli_query($conexao, "SELECT * FROM desenvolvedor WHERE email = '$email' AND senha = '$senha'");
                                             $nome = mysqli_fetch_assoc($nome_sql);
                                             
                                             $query = "SELECT * FROM desenvolvedor WHERE email = '$email' and senha = '$senha' LIMIT 1";
@@ -67,6 +67,7 @@
                                                 $_SESSION["foto"] = $nome["foto"];
                                                 $_SESSION["id_dev"] = $nome["id_dev"];
                                                 $_SESSION["email"] = $nome["email"];
+                                                $_SESSION["type_user"] = $nome["type_user"];
                                                 exit();
                                             }
                                         }

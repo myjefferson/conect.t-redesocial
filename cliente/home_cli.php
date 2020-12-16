@@ -1,4 +1,4 @@
-<?php 
+<?php ob_start(); //inicio buffer
 session_start(); $id_cli = $_SESSION['id_cli']; include("../conexao_banco.php"); include("functions_cli.php");
      
     //Iserção de postagens
@@ -17,13 +17,13 @@ session_start(); $id_cli = $_SESSION['id_cli']; include("../conexao_banco.php");
             
             $query = "INSERT INTO postagens (`texto`, `imagem`, `data`,`id_cli`) VALUES ('".$_POST['texto']."','$novo_nome',now(),'$id_cli')";
             
-            if(mysqli_query($conexao, $query))
+            if($conexao->query($query))
             {
-                //header("location: home_cli.php");
+                header("location: home_cli.php");
             }
             else
             {
-                //header("location: home_cli.php");
+                header("location: home_cli.php");
                 echo"Não foi possível inserir a postagem";
             }
         }else{
@@ -103,3 +103,6 @@ session_start(); $id_cli = $_SESSION['id_cli']; include("../conexao_banco.php");
         </script>
     </body>
 </html>
+<?php
+    ob_end_flush(); //encerramento do buffer/clean
+?>

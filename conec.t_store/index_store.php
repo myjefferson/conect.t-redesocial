@@ -11,8 +11,11 @@
 
         <div class="conteudo">
             <header>
-                <a id="btn_postar" href="publish_software.php">Publicar Projeto</a>
-                <a id="btn_mypublics" href="my_publishs.php">Meus Anúncios</a>
+                <?php if(isset($_SESSION['type_user'])){
+                    if($_SESSION['type_user'] == 'dev'){ ?>
+                        <a id="btn_postar" href="publish_software.php">Publicar Projeto</a>
+                        <a id="btn_mypublics" href="my_publishs.php">Meus Anúncios</a>
+                <?php }} ?>
             </header>
 
             <?php 

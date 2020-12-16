@@ -62,9 +62,9 @@
 <?php 
     //Carregar postagens
     if($id_page == "perfil_dev.php"){
-        $resultados = mysqli_query($conexao, 'SELECT * FROM postagens WHERE id_dev = '.$id_dev.' ORDER BY id_post DESC'); 
+        $resultados = $conexao->query('SELECT * FROM postagens WHERE id_dev = '.$id_dev.' ORDER BY id_post DESC'); 
     }else{
-        $resultados = mysqli_query($conexao, 'SELECT * FROM postagens ORDER BY id_post DESC ');
+        $resultados = $conexao->query('SELECT * FROM postagens ORDER BY id_post DESC ');
     }   
     
         
@@ -84,11 +84,11 @@
                     <div class='block'> 
                     
                         <?php //VERIFICA FOTO DOS POSTS
-                            $check_query_cli = mysqli_query($conexao, 'SELECT * FROM postagens P, cliente C WHERE C.id_cli = '.$post['id_cli'].'');
-                            $user_cli = mysqli_fetch_assoc($check_query_cli);
-
-                            $check_query_dev = mysqli_query($conexao, 'SELECT * FROM postagens P, desenvolvedor D WHERE D.id_dev = '.$post['id_dev'].'');
-                            $user_dev = mysqli_fetch_assoc($check_query_dev);
+                            $check_query_cli = $conexao->query('SELECT * FROM postagens P, cliente C WHERE C.id_cli = '.$post['id_cli'].'') or die();
+                            $user_cli = $check_query_cli->fetch_assoc();
+                            
+                            $check_query_dev = $conexao->query('SELECT * FROM postagens P, desenvolvedor D WHERE D.id_dev = '.$post['id_dev'].'') or die();
+                            $user_dev = $check_query_dev->fetch_assoc();
 
                             if($id_dev == $post['id_dev']){
                                 //APAGAR POSTAGEM

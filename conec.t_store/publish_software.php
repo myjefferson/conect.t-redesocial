@@ -1,15 +1,17 @@
+<?php session_start();
+if(isset($_SESSION['type_user'])){
+    if($_SESSION['type_user'] == "dev"){ ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>CONEC.T Store - Anunciar Programa</title>
-
         <link rel="stylesheet" href="assets/css/publish_software.css">
         <script type="text/javascript" src="assets/js/mask.js"></script>
     </head>
     <body>
         <?php
-            session_start();
             if(isset($_POST['publicar'])){
                 if(isset($_POST['title']) && isset($_POST['site'])){
                     include_once "functions_store.php";
@@ -53,26 +55,55 @@
 
                     <div id="box">
                         <p>Classificação indicativa</p>
-                        <p>Livre</p>
+                        <img src="assets/img/L.png" class="" id="imgParental" alt="L" onclick="selectParental('L')">
                         <input type="radio" id="L" name="parentalRating" value="L">
-                        <p>10</p>
+                        <img src="assets/img/10.png" class="" id="imgParental" alt="10" onclick="selectParental('10')">
                         <input type="radio" id="10" name="parentalRating" value="10">
-                        <p>12</p>
+                        <img src="assets/img/12.png" class="" id="imgParental" alt="12" onclick="selectParental('12')">
                         <input type="radio" id="12" name="parentalRating" value="12">
-                        <p>14</p>
+                        <img src="assets/img/14.png" class="" id="imgParental" alt="14" onclick="selectParental('14')">
                         <input type="radio" id="14" name="parentalRating" value="14">
-                        <p>16</p>
+                        <img src="assets/img/16.png" class="" id="imgParental" alt="16" onclick="selectParental('16')">
                         <input type="radio" id="16" name="parentalRating" value="16">
-                        <p>18</p>
+                        <img src="assets/img/18.png" class="" id="imgParental" alt="18" onclick="selectParental('18')">
                         <input type="radio" id="18" name="parentalRating" value="18">
                     </div>
+                    <script>
+                        $("input[name='parentalRating']").css('display','none');
+                        function selectParental(typeRating){
+                            $("form input[value='"+typeRating+"']").prop('checked', true);
+                            $("form #imgParental").attr('class','');
+                            $("form img[alt='"+typeRating+"']").attr('class','checkParental');
+                        } 
+                    </script>
 
                     <div id="box">
                         <p>Plataforma</p>
-                        Apple<input type="checkbox" name="plataforma[]" value="Apple">
-                        Windows<input type="checkbox" name="plataforma[]" value="Windows">
-                        Android<input type="checkbox" name="plataforma[]" value="Android"><br>
+                        <div class="boxPlatforms">
+                            <img src="assets/img/apple.png" alt="Apple" class="" onclick="platform('Apple')">
+                            <input type="checkbox" name="plataforma[]" value="Apple">
+                            <img src="assets/img/windows.png" alt="Windows" class="" onclick="platform('Windows')">
+                            <input type="checkbox" name="plataforma[]" value="Windows">
+                            <img src="assets/img/linux.png" alt="Linux" class="" onclick="platform('Linux')">
+                            <input type="checkbox" name="plataforma[]" value="Linux">
+                            <img src="assets/img/android.png" alt="Android" class="" onclick="platform('Android')">
+                            <input type="checkbox" name="plataforma[]" value="Android">
+                        </div>
                     </div>
+
+                    <script>
+                        $("form input[name='plataforma[]']").css('display','none');
+                        function platform(type){
+                            if($("form input[value='"+type+"']").prop('checked') == false){
+                                $("form input[value='"+type+"']").prop('checked',true);
+                                $("form .boxPlatforms img[alt='"+type+"']").attr('class','checkPlatform');
+                            }else{
+                                $("form input[value='"+type+"']").prop('checked',false);
+                                $("form .boxPlatforms img[alt='"+type+"']").attr('class','');
+                            }
+                            
+                        }
+                    </script>
                     
                     <div id="principal_box">
                         <div id="box_installer">
@@ -119,3 +150,8 @@
         </div>
     </body>
 </html>
+<?php 
+    }else{
+        header("Location: ./index_store.php");     
+    }
+} ?>

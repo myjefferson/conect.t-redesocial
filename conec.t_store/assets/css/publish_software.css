@@ -41,6 +41,44 @@ form #box input[type=text], form #box textarea, form #box input[type=email]{
     box-shadow: none;
 }
 
+/*img parental*/
+form #imgParental{
+    cursor: pointer;
+    width: 50px;
+    margin: 6px;
+}
+
+form img#imgParental{
+    opacity: 52%;
+    padding: 4px;
+}
+
+form img#imgParental:hover{
+    opacity: 100%;
+}
+
+form img.checkParental{
+    opacity: 100% !important;
+    border: 2px solid #888;
+    border-radius: 4px;
+}
+
+/*img platforms*/
+form .boxPlatforms img{
+    cursor: pointer;
+    width: 45px;
+    margin: 10px;
+    opacity: 52%;
+    border-radius: 4px;
+}
+
+form .boxPlatforms img.checkPlatform{
+    opacity: 100% !important;
+    border: 2px solid #888;
+    padding: 3px;
+    border-radius: 4px;
+}
+
 /*Insert program purple*/
 form div#principal_box{
     display: block;

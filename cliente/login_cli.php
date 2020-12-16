@@ -39,7 +39,7 @@
             </div>
             <!--Rodapé-->
             <span id="rodape" class="align-middle" style="float: right; margin-top: 33%;">
-                <p id="text-footer">&copy 2020 COPYRIGHT CONEC.T - <a style="color: #7D26CD;" href="../index_cli.php">Sobre</a> - <a href="../desenvolvedor/login_dev.php" style="color: #7D26CD;">Entrar como desenvolvedor</a></p>
+                <p id="text-footer">&copy 2021 COPYRIGHT CONEC.T - <a style="color: #7D26CD;" href="../index_cli.php">Sobre</a> - <a href="../desenvolvedor/login_dev.php" style="color: #7D26CD;">Entrar como desenvolvedor</a></p>
             </span> 
         </div> 
         

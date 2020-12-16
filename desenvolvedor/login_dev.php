@@ -37,7 +37,7 @@
 
             <!--Rodapé-->
             <span class="align-middle">
-                <p id="text-footer">&copy 2020 COPYRIGHT CONEC.T - <a href="../index_dev.php">Sobre</a> - <a href="../cliente/login_cli.php">Entrar como cliente</a></p>
+                <p id="text-footer">&copy 2021 COPYRIGHT CONEC.T - <a href="../index_dev.php">Sobre</a> - <a href="../cliente/login_cli.php">Entrar como cliente</a></p>
             </span>
         </div> 
         

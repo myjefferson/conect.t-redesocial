@@ -24,7 +24,7 @@
 
                             <div id="dmds-cards"> 
 
-                                <?php $query = mysqli_query($conexao, "select * from demandas where id_working = ".$_SESSION['id']."");
+                                <?php $query = $conexao->query("SELECT * FROM demandas WHERE id_working = ".$_SESSION['id_dev']."");
                                     if(mysqli_num_rows($query) > 0){
                                         while($linha = mysqli_fetch_assoc($query)){
                                             echo"<div class='card card-dmds float-left col-xs-5 col-sm-6 col-md-6'>";
@@ -48,7 +48,7 @@
                             <div class="head-box2"><h3 id="dmds-head-text"><span class="material-icons problem">report_problem</span> Demandas pendentes</h3></div> 
 
                             <div id="dmds-cards">    
-                                <?php $query = mysqli_query($conexao, "select * from demandas where id_working = ".$_SESSION['id']."");
+                                <?php $query = $conexao->query("SELECT * FROM demandas WHERE id_working = ".$_SESSION['id_dev']."");
                                     if(mysqli_num_rows($query)){
                                         while($linha = mysqli_fetch_assoc($query)){
                                             echo"<div class='card-dmds card float-left col-xs-5 col-sm-6 col-md-6'>";
@@ -72,7 +72,7 @@
                             <div class="head-box3"><h3 id="dmds-head-text"><span class="material-icons block">not_interested</span> Demandas Canceladas</h3></div> 
 
                             <div id="dmds-cards">    
-                                <?php $query = mysqli_query($conexao, "select * from demandas where id_working = ".$_SESSION['id']."");
+                                <?php $query = $conexao->query("SELECT * FROM demandas WHERE id_working = ".$_SESSION['id_dev']."");
                                     if(mysqli_num_rows($query)){
                                         while($linha = mysqli_fetch_assoc($query)){
                                             echo"<div class='card card-dmds float-left col-xs-5 col-sm-6 col-md-6'>";

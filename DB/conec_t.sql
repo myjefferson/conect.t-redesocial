@@ -1,5 +1,5 @@
 -- Banco de dados: `conec.t`
-CREATE DATABASE IF NOT EXISTS `conec.t`;
+CREATE DATABASE IF NOT EXISTS `conec.t` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `conec.t`;
 
 -- Estrutura da tabela `chat`
@@ -11,7 +11,7 @@ CREATE TABLE `chat` (
   `tipo_user_recebeu` varchar(50) NOT NULL,
   `mensagem` text NOT NULL,
   `hour` date NOT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `cliente`
 CREATE TABLE `cliente` (
@@ -26,7 +26,7 @@ CREATE TABLE `cliente` (
   `ft_capa` text NOT NULL,
   `descricao` text NOT NULL,
   `forKey` text NOT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `cod_recpassword`
 CREATE TABLE `cod_recpassword` (
@@ -34,7 +34,7 @@ CREATE TABLE `cod_recpassword` (
   `id_user` int (50),
   `type_user` varchar(20),
   `codRandom` text NOT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `comentarios`
 CREATE TABLE `comentarios` (
@@ -43,7 +43,7 @@ CREATE TABLE `comentarios` (
   `comentario` text CHARACTER SET latin1 NOT NULL,
   `post` int(11) NOT NULL,
   `data` date NOT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `comentarioscli`
 CREATE TABLE `comentarioscli` (
@@ -52,7 +52,7 @@ CREATE TABLE `comentarioscli` (
   `comentario` text CHARACTER SET latin1 NOT NULL,
   `post` int(11) NOT NULL,
   `data` date NOT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `demandas`
 CREATE TABLE `demandas` (
@@ -65,7 +65,7 @@ CREATE TABLE `demandas` (
   `prazo` varchar(30) NOT NULL,
   `tipo_money` varchar(200) DEFAULT NULL,
   `rec_dinheiro` varchar(40) NOT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `desenvolvedor`
 CREATE TABLE `desenvolvedor` (
@@ -82,7 +82,7 @@ CREATE TABLE `desenvolvedor` (
   `descricao` text NOT NULL,
   `termos` tinyint(1) NOT NULL,
   `forKey` text DEFAULT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `likes`
 CREATE TABLE `likes` (
@@ -90,19 +90,19 @@ CREATE TABLE `likes` (
   `post` int(11) NOT NULL,
   `id_dev` varchar(200) NOT NULL,
   `id_cli` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `postagens`
 CREATE TABLE `postagens` (
-  `id_post` int(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  `id_cli` int(100) NOT NULL,
-  `id_dev` int(100) NOT NULL,
+  `id_post` int(50) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `id_cli` int(50) NULL,
+  `id_dev` int(50) NULL,
   `data` date NOT NULL,
   `texto` text NOT NULL,
   `imagem` text NOT NULL,
-  `num_likes` int(100) NOT NULL,
-  `num_coments` int(100) NOT NULL
-);
+  `num_likes` int(50) NOT NULL,
+  `num_coments` int(50) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `programas_aval`
 CREATE TABLE `programas_aval` (
@@ -112,7 +112,7 @@ CREATE TABLE `programas_aval` (
   `id_cli` int(20) NOT NULL,
   `qtde_estrela` int(20) NOT NULL,
   `data` date NOT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- Estrutura da tabela `software_store`
 CREATE TABLE `software_store` (
@@ -130,4 +130,4 @@ CREATE TABLE `software_store` (
   `nome_dev` varchar(200) DEFAULT NULL,
   `parentalRating` varchar(20) DEFAULT NULL,
   `smallAbout` varchar(130) DEFAULT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
