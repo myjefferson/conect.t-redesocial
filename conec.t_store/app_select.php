@@ -2,23 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css_store/app_select.css">
+    <link rel="stylesheet" href="assets/css/app_select.css">
     <title>CONEC.T Store</title>
 </head>
 <body>
-    <?php session_start(); include("nav_store.php"); include("functions_store.php"); ?>
+    <?php session_start(); include("navTop_store.php"); include("functions_store.php"); ?>
     <div class="backgroud-head">
         <div class="container">
             <div class="col">
                 <section class="head-app">
                     <?php 
-                        $busca_prog = mysqli_query($conexao, 'SELECT * FROM programas_loja WHERE id = '.$_GET["prog"].'');
+                        $busca_prog = $conexao->query('SELECT * FROM software_store WHERE id = '.$_GET["prog"].'');
                         
                         if(mysqli_num_rows($busca_prog) > 0){
-                            $load = mysqli_fetch_assoc($busca_prog);
+                            $load = $busca_prog->fetch_assoc();
 
-                            echo "<img src='icons_store/".$load['icone']."' id='icone'/><label class='info'><p id='title'>".$load['titulo']."</p><p id='title-dev'>Desenvolvedor: ".$load['nome_dev']."</p><p>".$load['preco']."</p></label>";               
+                            echo "<img src='data_imgs_store/".$load['icone']."' id='principalImage'/><label class='info'><p id='title'>".$load['title']."</p><p id='title-dev'>Desenvolvedor: ".$load['nome_dev']."</p><img id='parentalRating' src='assets/img/".$load['parentalRating'].".png'><p id='smallAbout'>".$load['smallAbout']."</p><p>".$load['preco']."</p></label>";               
+                            
                     ?>
+
+                            
+
                     <?php if(isset($_POST['avaliar'])){
                                 avaliacao_programa();
                             } ?>
@@ -59,17 +63,20 @@
             </div>
         </div>
     </div>
-
-    <section class="content-app">
-        <span class="desc">
-        <?php
-            echo $load['descricao'];
-            }else{
-                echo"Desculpe, produto não encontrado";
-            }
-        ?>
-        </span>
-    </section>
+    
+    <div class="container cont-2">
+        <div class="col">
+            <section class="desc">
+                <h2>Descrição</h2>
+                <?php
+                    echo $load['descricao'];
+                    }else{
+                        echo"Desculpe, o produto não está disponível";
+                    }
+                ?>
+            </section>
+        </div>
+    </div>
     
 
     <script>

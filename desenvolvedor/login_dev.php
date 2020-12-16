@@ -59,7 +59,7 @@
                     
                     $query = "SELECT * FROM desenvolvedor WHERE email = '$email' and senha = '$senha' LIMIT 1";
                     
-                    $resultado = mysqli_query($conexao, $query);
+                    $resultado = $conexao->query($query);
                     if(mysqli_num_rows($resultado) == 1){ 
                         header("Location: home_dev.php");               
                         $_SESSION["nome"] = $nome["nome"];

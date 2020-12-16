@@ -4,10 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title>CONEC.T Store</title>
-        <link rel="stylesheet" href="css_store/index_store.css">
+        <link rel="stylesheet" href="assets/css/index_store.css">
     </head>
     <body>
-        <?php include("nav_store.php"); ?>
+        <?php include("navTop_store.php"); ?>
 
         <div class="conteudo">
             <header>
@@ -26,12 +26,12 @@
                 <session id="novos-programas">
                 <?php
         
-                    $query = mysqli_query($conexao, "SELECT * FROM programas_loja");
+                    $query = mysqli_query($conexao, "SELECT * FROM software_store");
                     if($linhas = mysqli_num_rows($query) > 0){          
                         echo "<ul>";                                
                         $i = 0;     
                         while($load = mysqli_fetch_assoc($query) and $i++ < 5){                                                                                                             
-                            echo "<li><a href='app_select.php?prog=".$load['id']."'><img src='icons_store/".$load['icone']."' id='icone'/><br><p> ".$load['titulo']."</p><p>".$load['plataforma']."<br>".$load['preco']."</p><br></a>";    
+                            echo "<li><a href='app_select.php?prog=".$load['id']."'><img src='data_imgs_store/".$load['icone']."' id='icone'/><br><p> ".$load['title']."</p><p>".$load['plataforma']."<br>".$load['preco']."</p><br></a>";    
                             //echo "<a href='progs_store/".$load['arc_windows']."' download' id='baixar'><p>Baixar</p></a></li>";    
                             echo "<a href='progs_store/".$load['arc_windows']."' download id='baixar'><p>Baixar</p></a></li>";    
                         }      

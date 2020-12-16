@@ -138,7 +138,7 @@
                         <div class="box-form col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="box-enviar-email">   
                                 <span class="material-icons">lock</span>             
-                                <form class="col-sm-12 col-md-12 col-lg-12 col-xs-8" action="alterar_senha.php?pass=<?php echo$_GET['pass']; ?>&key=<?php echo$_GET['key']; ?>" method="POST">
+                                <form class="col-sm-12 col-md-12 col-lg-12 col-xs-8" action="alterar_senha.php?pass=<?php if(isset($_GET['pass'])){ echo$_GET['pass']; } ?>&key=<?php if(isset($_GET['key'])){ echo$_GET['key']; } ?>" method="POST">
                                     <h3>Recuperação de conta</h3>
                                     <h5>Desenvolvedor</h5>
                                     <p id="text_help"><b>Atenção:</b> </br>Digite uma nova senha para recuperar sua conta.</p>

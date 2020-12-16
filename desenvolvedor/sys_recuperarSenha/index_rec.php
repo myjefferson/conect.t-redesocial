@@ -4,7 +4,7 @@
     <title>CONEC.T SUPPORT - Recuperação de conta</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/sysPassword.css" type="text/css">
-    
+    <?php include("header.html"); ?>
 </head>
     <body>
         <div id="recuperar">

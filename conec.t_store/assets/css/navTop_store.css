@@ -1,0 +1,39 @@
+nav{
+   position: absolute;
+   top: 0;
+   z-index: 1;
+   width: 100%;
+   height: 79px;
+   background: #E6DFFF;
+   box-shadow: 0px 6px 9px rgba(0,0,0,.1);
+}
+
+nav #user_options{
+    float: right;
+    width: max-content;
+    height: 79px;
+    padding: 14px 40px 0 25px;
+}
+
+nav #user_options img{
+    width: 49px;
+    vertical-align: middle;
+    cursor: pointer; 
+}
+
+nav #logo-store{
+    float: left;
+    width: 195px;
+    margin-left: 30px;
+    padding: 9px;
+}
+
+nav #user_options label{
+    color: #2D02CA;
+    cursor: pointer; 
+}
+
+#user_options label{
+    margin: 0px 15px 0px 0px;
+}
+

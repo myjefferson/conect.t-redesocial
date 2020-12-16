@@ -1,0 +1,124 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/*Backgrounds*/
+.background-downlaod{
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  background: #C5C2FE;
+  padding: 15px;
+}
+
+.backgroud-head{
+  position: relative;
+  left: 0;
+  padding-top: 15px; 
+  height: 300px;
+  width: 100vw;
+  background: #E6DFFF;
+}
+
+/*info head-app*/
+.head-app{
+  height: max-content;
+  margin: 80px 0 0 0;
+  color: white;
+}
+
+.head-app img#principalImage{
+  width: 170px;
+  display: block;
+  float: left;
+  margin: 10px 15px 0 5px;
+  border-radius: 10px;
+  background: #A112FF;
+}
+
+/*parentalRating*/
+.head-app img#parentalRating{
+  width: 40px;
+}
+
+.head-app #title{
+  color: #404040;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.head-app p#title-dev{
+  color: #4E0081;
+  font-size: 14.5px;
+}
+
+.head-app p#smallAbout{
+  max-width: 690px;
+  color: #555;
+  margin: 10px 0 0 0;
+}
+
+/*Buttons download*/
+.background-downlaod div #buttons-download{
+  float: right;
+}
+
+.background-downlaod button#list-desire {
+  background: white;
+  color: #A112FF;
+  border: 2px solid #A112FF;
+  margin-right: 10px;
+}
+
+.background-downlaod button#download{
+  background: #A112FF;
+  border: 2px solid white;
+}
+
+.background-downlaod button#list-desire, .background-downlaod button#download{
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+/*avaliacao*/
+#avaliacao{
+  float: right;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+.moredesc span{
+  display: none;
+  transition: 1s;
+  
+}
+
+/*Estrelas e botão*/
+.estrelas input[type=radio]{
+  display: none;
+}
+.estrelas label i.fa:before{
+  content: '★';
+  font-style: normal;
+  font-size: 23px;
+  color: #980BF5;
+}
+.estrelas input[type="radio"]:checked ~ label i.fa:before{
+  color: #A4A4A4;
+}
+
+#avaliacao input{
+  background: #A112FF;
+  border: 2px solid white;
+  width: 100%;
+}
+
+/*description-general*/
+.cont-2{
+  margin-top: 100px;  
+}

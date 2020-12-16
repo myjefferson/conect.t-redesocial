@@ -1,0 +1,52 @@
+body .container{
+    margin-top: 85px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #F5F5F5 !important;
+}
+
+/*Titulo do topo*/
+div#top-title{
+    margin: 10px 0 40px 0;
+}
+
+form{
+    margin: 0 auto;
+    width: 600px;
+}
+
+/*titulos das seções*/
+form h3{
+    font-size: 22px;
+    border-bottom: 1px solid #ACACAC;
+    padding-bottom: 7px; 
+}
+
+form #box p{
+    color: #2D73FF;
+    font-size: 16px;
+    margin-bottom: 8px; 
+}
+
+form #box{
+    margin: 23px 0 0 0;
+}
+
+form #box input[type=text], form #box textarea, form #box input[type=email]{
+    background: #F6FFFF;
+    border-color: #2D73FF;
+    box-shadow: none;
+}
+
+/*Insert program purple*/
+form div#principal_box{
+    display: block;
+    clear: both;
+}
+
+form div#box_installer{
+    float: left;
+}
