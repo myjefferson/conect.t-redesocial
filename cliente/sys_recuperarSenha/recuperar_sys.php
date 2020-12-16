@@ -1,24 +1,18 @@
 <meta name="viewport" content="width=cliice-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <link rel="icon" type="imagem/png" href="../../icones/conec.t-icon-head-web.png">
 <link rel="stylesheet" href="css/sysPassword.css" type="text/css">
-<link rel="stylesheet" href="../../lib/materialize/icons_materialize.css"> 
-<link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css" type="text/css">
-
-<script type="text/javascript" src="../../lib/bootstrap/js/jquery_ajax_2.1.3.min.js"></script>
-<script type="text/javascript" src="../../lib/bootstrap/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<?php include("header.html"); ?>
 <body>
     <div id="recuperar">
         <img src="../style_cli/img_cli/logo.png" id="logo"><label id="support">SUPPORT</label>
         <?php
             require '../../conexao_banco.php';
-            require 'PHPMailer/class.phpmailer.php';
-            require 'PHPMailer/PHPMailerAutoload.php';
             require '../lib/modais_info.php';
+            require '../../lib/PHPMailer/PHPMailerAutoload.php';
             
             //ATENÇÃO: CONFIGURE O php.ini PARA O FUNCIONAMENTO DO SMTP DA SEGUINTE FORMA:
             //SMTP= smtp.gmail.com
-            //smtp_port= 465
+            //smtp_port= 587
             
             if(isset($_POST['btnEnviarEmail'])){ 
                 if(isset($_POST['email_cli'])){         
@@ -29,6 +23,7 @@
                         $user = mysqli_fetch_assoc($queryEmail); 
                         $senha_user = $user['senha'];
                         $id_cli = $user['id_cli'];
+                        $type_user = $user['type_user'];
 
                         $mail = new PHPMailer();
                         //Será usado SMTP
@@ -37,12 +32,12 @@
                         $mail->CharSet = "UTF-8";
                 
                         $mail->SMTPAuth = true;
-                        $mail->SMTPSecure = 'ssl';
+                        $mail->SMTPSecure = 'tls';
                 
                         $mail->Host = "smtp.gmail.com";  
                         //$mail->isHTML(true);
                         
-                        $mail->Port = 465;
+                        $mail->Port = 587;
                 
                         $mail->Username = 'conec.tspprt@gmail.com';
                         $mail->Password = 'conLJR20';
@@ -52,20 +47,15 @@
                         $mail->addReplyTo('no-reply@email.com.br');
                         //Conteudo a ser eviado
                         //Titulo
-                        $mail->Subject = "Recuperação de conta CONEC.T - cliente";            
+                        $mail->Subject = "Recuperação de conta CONEC.T - Cliente";            
                         
-                        $docKey = sha1(uniqid(mt_rand(), true));
-
-                        $queryCod = mysqli_query($conexao, "SELECT * FROM cod_recpassword WHERE codRandom = '$docKey'");
-                        if(mysqli_num_rows($queryCod) > 0){
-                            geraCod();
-                        }else{
-                            mysqli_query($conexao, "INSERT INTO cod_recpassword (codRandom) VALUES ('$docKey')");
-                            $captureCod =  mysqli_query($conexao, "SELECT * FROM cod_recpassword WHERE codRandom = '$docKey'");
-                            $cod = mysqli_fetch_assoc($captureCod);
-                            $codigo = $cod['codRandom'];  
-                            $id = $cod['id'];
-                        }
+                        //Inserção de Rash Pass
+                        $docKey = sha1(uniqid(mt_rand(), true)); //rash pass
+                        $conexao->query("INSERT INTO cod_recpassword (codRandom, id_user, type_user) VALUES ('$docKey', '$id_dev', '$type_user')");
+                        $captureCod =  $conexao->query("SELECT * FROM cod_recpassword WHERE codRandom = '$docKey' and id_user = '$id_dev' and type_user = '$type_user' ");
+                        $cod = mysqli_fetch_assoc($captureCod);
+                        $codigo = $cod['codRandom'];  
+                        $id = $cod['id'];
                                      
                         //Corpo
                         //Enviar imagem
@@ -77,7 +67,7 @@
                         $mail->Body = 
                         "<body style='margin: 0;font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Noto Sans&quot;,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,&quot;Noto Color Emoji&quot;;font-size: 1rem;line-height: 1.5;color: #303030;text-align: left;background-color: #fff;'>
                             <p style='box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;text-align: center;'><img src='cid:logo' style='box-sizing: border-box;vertical-align: middle;border-style: none;page-break-inside: avoid;width: 280px;margin-top: -20px;padding: 0;'></p><link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' style='box-sizing: border-box;'>
-                            <p id='title' style='box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;text-align: center;font-size: 17px;font-weight: bold;margin: 0;'>Olá cliente!</p><p id='info' style='box-sizing: border-box;margin-top: 0;margin-bottom: 20px;orphans: 3;widows: 3;text-align: center;font-size: 17px;'>Recupere sua conta clicando no botão abaixo</p><p style='text-decoration: none;box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;text-align: center'><a style='font-weight: bold; font-size: 20px; color: #404040; text-decoration: none; padding: 10px; border-radius: 100px; background: #14CE91; margin-bottom: 30px;' href='{$iplocal}/CONEC.T/cliente/sys_recuperarSenha/verify_user_cli.php?pass={$codigo}&id={$id}'>Recuperar Conta</a></p>
+                            <p id='title' style='box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;text-align: center;font-size: 17px;font-weight: bold;margin: 0;'>Olá Cliente!</p><p id='info' style='box-sizing: border-box;margin-top: 0;margin-bottom: 20px;orphans: 3;widows: 3;text-align: center;font-size: 17px;'>Recupere sua conta clicando no botão abaixo</p><p style='text-decoration: none;box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;text-align: center'><a style='font-weight: bold; font-size: 20px; color: #404040; text-decoration: none; padding: 10px; border-radius: 100px; background: #14CE91; margin-bottom: 30px;' href='{$iplocal}/CONEC.T-RedeSocial/cliente/sys_recuperarSenha/verify_user_cli.php?pass={$codigo}&id={$id}'>Recuperar Conta</a></p>
                         </body>";
                         
                         $mail->isHTML(true);

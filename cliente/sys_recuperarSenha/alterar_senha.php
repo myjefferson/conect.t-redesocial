@@ -6,12 +6,7 @@
         <meta name="viewport" content="width=cliice-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <link rel="icon" type="imagem/png" href="../../icones/conec.t-icon-head-web.png">
         <link rel="stylesheet" href="css/sysPassword.css" type="text/css">
-        <link rel="stylesheet" href="../style_cli/materialize/icons_materialize.css"> 
-        <link rel="stylesheet" href="../style_cli/css_cli/bootstrap.min.css" type="text/css">
-
-        <script type="text/javascript" src="../style_cli/js/jquery_ajax_2.1.3.min.js"></script>
-        <script type="text/javascript" src="../style_cli/js/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="../style_cli/js/bootstrap.min.js"></script>
+        <?php include("header.html"); ?>
     </head>
     <body>
         <?php 
@@ -143,7 +138,7 @@
                         <div class="box-form col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="box-enviar-email">   
                                 <span class="material-icons">lock</span>             
-                                <form class="col-sm-12 col-md-12 col-lg-12 col-xs-8" action="alterar_senha.php?pass=<?php echo$_GET['pass']; ?>&key=<?php echo$_GET['key']; ?>" method="POST">
+                                <form class="col-sm-12 col-md-12 col-lg-12 col-xs-8" action="alterar_senha.php?pass=<?php if(isset($_GET['pass'])){ echo$_GET['pass']; } ?>&key=<?php if(isset($_GET['key'])){ echo$_GET['key']; } ?>" method="POST">
                                     <h3>Recuperação de conta</h3>
                                     <h5>Cliente</h5>
                                     <p id="text_help"><b>Atenção:</b> </br>Digite uma nova senha para recuperar sua conta.</p>

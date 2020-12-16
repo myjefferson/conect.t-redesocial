@@ -5,7 +5,7 @@
         <title>CONEC.T - Cadastro Cliente</title>
         <link rel="stylesheet" href="style_cli/css_cli/cad_cli.css">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style_cli/css_cli/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="style_cli/css_cli/bootstrap-datetimepicker.min.css" type="text/css">
     </head>
     <body>
