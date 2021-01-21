@@ -4,21 +4,26 @@ div.modal-backdrop{
 }
 
 div.modal-content{
-  border: 1px solid #01FAA9;
+  border: none;
+}
+
+div.modal-content h5{
+  font-weight: bold;
 }
 
 div.modal-header, div.modal h5, div.modal-header span{
   background: white;
-  color: #0E1020;
+  color: #0066FF;
   border: none;
 }
 
 div.modal-body{
-  background: #333347;
+  background: #fff;
+  color: #333;
 }
 
 div.modal-body p{
-  color: white;
+  color: #0066FF;
 }
 
 div.modal{
@@ -35,21 +40,21 @@ div.modal-footer{
 }
 
 div.modal-footer .salvar{
-  background: #01FAA9;
-  color: black;
+  background: ##0066FF;
+  color: #fff;
   border: none;
   outline: none;
 }
 
 div.modal-footer .salvar:hover{
-  background: #14CE91;
+  background: #003EAA;
   box-shadow: none;
   border-color:  none;
 }
 
 div.modal-footer .salvar:focus{
-border-color:  none;
-    box-shadow: none;
+  border-color:  none;
+  box-shadow: none;
 }
 
 /*alterar perfil estilos*/
@@ -60,17 +65,18 @@ div.modal-dialog{
 
 div.modal form input, div.modal form textarea{
   background: white;
-  color: #0E1020;
+  color: #444;
 }
 
 div.modal form input:hover, div.modal form textarea:hover{
-  background: #0E1020;
+  background: #eee;
+  color: #444;
 }
 
 div.modal form input:focus, div.modal form textarea:focus{
-  background: #0E1020;
+  background: #fff;
   box-shadow: none;
-  color: white;
+  color: #444;
 }
 
 div.modal form textarea{

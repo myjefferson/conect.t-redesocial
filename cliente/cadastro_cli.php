@@ -63,7 +63,7 @@
                         <div class="form-group">
                             <input class="form-control" type="text" placeholder="Nome e Sobrenome" name="nome" onfocus="input_click(this)" required="">
                             <input class="form-control" id="data" type="date" name="dataNasc" value="2023-01-10" onfocus="input_click(this)" required="">
-                            <input class="form-control" type="text" placeholder="Email" name="email" onfocus="input_click(this)" required="">
+                            <input class="form-control" type="email" placeholder="Email" name="email" onfocus="input_click(this)" required="">
                             <input class="form-control" type="password" placeholder="Nova Senha" name="senha" onfocus="input_click(this)" required="">  
                             <input class="form-control" type="password" placeholder="Digite sua senha novamente" name="senha-novamente" onfocus="input_click(this)" required="">
                             <script>

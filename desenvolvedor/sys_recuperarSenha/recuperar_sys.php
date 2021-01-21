@@ -16,7 +16,7 @@
             if(isset($_POST['btnEnviarEmail'])){ 
                 if(isset($_POST['email_dev'])){         
                     $emailDev = $_POST['email_dev'];
-                    $queryEmail = mysqli_query($conexao, "SELECT id_dev, type_user FROM desenvolvedor WHERE email = '$emailDev'");
+                    $queryEmail = $conexao->query("SELECT id_dev, type_user FROM desenvolvedor WHERE email = '$emailDev'");
                     
                     if(mysqli_num_rows($queryEmail) > 0){
                         $user = mysqli_fetch_assoc($queryEmail); 

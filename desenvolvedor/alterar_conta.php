@@ -38,8 +38,8 @@
 <script>
     //Efeito modal alterar foto
     $('#modal-foto').click(function() {
-        $('#window-foto').modal()})
-    }
+        $('#window-foto').modal()
+    })
 </script>
 
 <!--Pré-visualizar a foto-->
@@ -129,8 +129,8 @@
 <script>
     //Efeito modal alterar foto
     $('#modal-capa').click(function() {
-        $('#window-capa').modal()})
-    }
+        $('#window-capa').modal()
+    })
 </script>
 
 <!--Pré-visualizar a foto da capa-->
@@ -224,13 +224,13 @@
 <script>
     //Efeito modal alterar descricao
     $('#btn_add_desc').click(function() {
-        $('#window-config').modal();})
-    }
+        $('#window-config').modal();
+    })
 
     //Efeito modal alterar perfil
     $('#modal-config').click(function() {
-        $('#window-config').modal()})
-    }    
+        $('#window-config').modal()
+    })
 </script>
 
 <?php

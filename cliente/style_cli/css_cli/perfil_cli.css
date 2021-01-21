@@ -73,8 +73,8 @@ hr{
 
 /*Estilo botão "Editar perfil"*/
 button#modal-config{
-  background:  #01FAA9;
-  color:  #1B1E21;
+  background:  #0066FF;
+  color:  #fff;
   display: block;
   float: right;
   text-align: center;
@@ -94,10 +94,10 @@ button#modal-config{
   height: 41px;
   float: left;
   border-radius: 100px;
-  background-color: #01FAA9;
+  background-color: #0066FF;
   padding: 8px;
   margin: 4px 0 0 20px;
-  color: #1B1E21;
+  color: #fff;
   font-weight: bold;
   box-shadow: 0 2px 3px rgba(0,0,0,0.3);
 }
@@ -113,7 +113,7 @@ button#modal-config{
 
 #title_descricao{
   font-weight: bold;
-  color: white;
+  color: #888;
   font-size: 20px;
   margin: -25px 0 0 10px;
 }
@@ -143,6 +143,7 @@ div#box-add-desc span.info{
   font-size: 36px;
   margin-right: 10px;
   float: left;
+  color: #444;
 }
 
 /*texto 'dicas importantes'*/
@@ -170,14 +171,17 @@ div#box-add-desc p span{
   border-radius: 6px;
 }
 
+/*Informações do usuário*/
 div.card.info-user{
   margin-top: 40%;
+  color: #444;
 }
 
 .name-user p#name{
   font-size: 240%;
   margin: 15% 0 0 0;
   text-align: center;
+  color: #444;
 }
 
 .user-top{
@@ -210,17 +214,14 @@ i:hover{
   opacity: 100%;
 }
 
-div.card-header{
-  background: #168BFA;
-}
-
 div.card{
   position: relative;
-  color: white;
   margin: 20px 0 20px 0;
-  background-color: #168BFA;
+  background-color: #fff;
+  color: white;
   border-radius: 5px;
   outline: none;
+  box-shadow: 0px 0px 8px rgba(80,80,80,.1111);
 }
 
 #text-qtde{

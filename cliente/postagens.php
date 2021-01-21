@@ -8,7 +8,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js_config/like_unlike.js"></script>  
-<link rel="stylesheet" href="style_cli/css_cli/estl_posts.css">
+<link rel="stylesheet" href="style_cli/css_cli/postagens.css">
 <!--<audio id="song" src="js_config/songs/click.mp3"></audio> som ao clicar-->
 <script type="text/javascript">
     //SCRIPT DE COMENTARIOS
@@ -82,10 +82,10 @@
                     ?>
                     <div class='block'> 
                         <?php //VERIFICA FOTO DOS POSTS
-                        $check_query_cli = $conexao->query('SELECT * FROM postagens P, cliente C WHERE C.id_cli = '.$post['id_cli'].'') or die();
+                        $check_query_cli = $conexao->query("SELECT * FROM postagens P, cliente C WHERE C.id_cli = '{$post['id_cli']}'") or die();
                         $user_cli = $check_query_cli->fetch_assoc();
                         
-                        $check_query_dev = $conexao->query('SELECT * FROM postagens P, desenvolvedor D WHERE D.id_dev = '.$post['id_dev'].'') or die();
+                        $check_query_dev = $conexao->query("SELECT * FROM postagens P, desenvolvedor D WHERE D.id_dev = '{$post['id_dev']}'") or die();
                         $user_dev = $check_query_dev->fetch_assoc();
                         
                         if($id_cli == $post['id_cli']){

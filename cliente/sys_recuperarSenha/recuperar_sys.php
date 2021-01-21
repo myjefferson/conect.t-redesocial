@@ -51,8 +51,8 @@
                         
                         //Inserção de Rash Pass
                         $docKey = sha1(uniqid(mt_rand(), true)); //rash pass
-                        $conexao->query("INSERT INTO cod_recpassword (codRandom, id_user, type_user) VALUES ('$docKey', '$id_dev', '$type_user')");
-                        $captureCod =  $conexao->query("SELECT * FROM cod_recpassword WHERE codRandom = '$docKey' and id_user = '$id_dev' and type_user = '$type_user' ");
+                        $conexao->query("INSERT INTO cod_recpassword (codRandom, id_user, type_user) VALUES ('$docKey', '$id_cli', '$type_user')");
+                        $captureCod =  $conexao->query("SELECT * FROM cod_recpassword WHERE codRandom = '$docKey' and id_user = '$id_cli' and type_user = '$type_user' ");
                         $cod = mysqli_fetch_assoc($captureCod);
                         $codigo = $cod['codRandom'];  
                         $id = $cod['id'];

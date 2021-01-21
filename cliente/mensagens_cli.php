@@ -42,37 +42,37 @@
                                             $id_talking = $_GET['user'];
 
                                             //SELECT DEV
-                                            $query_user_dev = mysqli_query($conexao, "SELECT * FROM desenvolvedor WHERE type_user = '$type_talking' AND id_dev = '$id_talking'");
+                                            $query_user_dev = $conexao->query("SELECT * FROM desenvolvedor WHERE type_user = '$type_talking' AND id_dev = '$id_talking'");
                                             
                                             //SELECT CLI
-                                            $query_user_cli = mysqli_query($conexao, "SELECT * FROM cliente WHERE type_user = '$type_talking' AND id_cli = '$id_talking'");
-                                            if(mysqli_num_rows($query_user_dev) != 0 && $type_talking = "dev"){
-                                                $user_talking_dev = mysqli_fetch_assoc($query_user_dev);
+                                            $query_user_cli = $conexao->query("SELECT * FROM cliente WHERE type_user = '$type_talking' AND id_cli = '$id_talking'");
+                                            if(mysqli_num_rows($query_user_cli) != 0 && $type_talking){
+                                                $user_talking_cli = mysqli_fetch_assoc($query_user_cli);
                                                 ?>
                                                 <!--Oculta a tela de bem vindo-->
                                                 <script> $("#msm-welcome").hide(); </script>
 
-                                                <img src="fotos_dev/<?php echo$user_talking_dev['foto']; ?>" onerror=this.src="style_cli/img_cli/sem-perfil.png">
-                                                <label id="nome-user"><?php echo$user_talking_dev['nome']; ?></label>
+                                                <img src="fotos_cli/<?php echo$user_talking_cli['foto']; ?>" onerror="this.src='style_cli/img_cli/sem-perfil.png'">
+                                                <label id="nome-user"><?php echo$user_talking_cli['nome']; ?></label>
+                                                
                                                 <?php }else{ 
-                                                    $user_talking_cli = mysqli_fetch_assoc($query_user_cli);
+                                                    $user_talking_dev = mysqli_fetch_assoc($query_user_dev);
                                                     ?>
                                                     <!--Oculta a tela de bem vindo-->
                                                     <script> $("#msm-welcome").hide(); </script>
 
-                                                    <label id="text_client">Desenvolvedor</label>
-                                                    <img src="fotos_dev/<?php echo$user_talking_cli['foto']; ?>" onerror=this.src="style_cli/img_cli/sem-perfil.png">
-                                                    <label id="nome-user"><?php echo$user_talking_cli['nome']; ?></label>
+                                                    <label id="text_dev">Desenvolvedor</label>
+                                                    <img src="../desenvolvedor/fotos_dev/<?php echo$user_talking_dev['foto']; ?>" onerror="this.src='style_cli/img_cli/sem-perfil.png'">
+                                                    <label id="nome-user"><?php echo$user_talking_dev['nome']; ?></label>
                                                     
                                                <?php } ?>
                                                 
-                                                <?php } ?>  
+                                            <?php } ?>  
                                         </div>
                                     </div>
                                     </div>
 
                                     <div id="align-msm" class="list-mensagens">
-                                        <?php //include("sys_mensagem/list_msm_chat.php"); ?>
                                     </div>
 
                                      
@@ -107,12 +107,9 @@
                                                 if($row['type_user'] == "cli"){ ?>
                                                     <ul>                                     
                                                         <!--Pega o id do usuario atual-->
-                                                        <li><a id="user_select" href="?&type_user=<?php echo$row['type_user']; ?>&user=<?php echo$row['id_cli']; ?>"><b><img src="fotos_dev/<?php echo$foto; ?>" onerror=this.src="style_cli/img_cli/sem-perfil.png"><?php echo $nome; ?></b></a></li>  
+                                                        <li><a id="user_select" href="?&type_user=<?php echo$row['type_user']; ?>&user=<?php echo$row['id_cli']; ?>"><b><img src="fotos_cli/<?php echo$foto; ?>" onerror="this.src='style_cli/img_cli/sem-perfil.png'"><?php echo $nome; ?></b></a></li>  
                                                     </ul>
                                                 <?php } 
-
-
-                                                
                                             }
                                         }
                                         //SELECT DEV
@@ -126,7 +123,7 @@
                                                 if($row['type_user'] == "dev"){ ?>
                                                     <ul>                                     
                                                         <!--Pega o id do usuario atual-->
-                                                        <li><a id="user_select" href="?&type_user=<?php echo$row['type_user']; ?>&user=<?php echo$row['id_dev']; ?>"><b><img src="fotos_dev/<?php echo$foto; ?>" onerror=this.src="style_cli/img_cli/sem-perfil.png"><?php echo $nome; ?></b></a></li>  
+                                                        <li><a id="user_select" href="?&type_user=<?php echo$row['type_user']; ?>&user=<?php echo$row['id_dev']; ?>"><b><img src="../desenvolvedor/fotos_dev/<?php echo$foto; ?>" onerror="this.src='style_cli/img_cli/sem-perfil.png'"><?php echo $nome; ?></b></a></li>  
                                                     </ul>
                                                 <?php } 
                                             //}

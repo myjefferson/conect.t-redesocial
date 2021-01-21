@@ -5,6 +5,7 @@ body{
   background-attachment: fixed;
 }
 
+/*margem dos cards*/
 .card{
   color: white;
   margin: 20px 0 20px 0;
@@ -12,7 +13,8 @@ body{
   border-radius: 5px;
 }
 
-.card-header{
+/*card de postagem*/
+.card-postar .card-header{
   color: white;
   background-color: #168BFA !important;
 }
@@ -96,31 +98,6 @@ textarea.form-control{
 }
 
 /*Estilo conteudo da postagem*/
-.card #img_postador{
-  float: left;
-  width: 40px;
-  border-radius: 100px;
-  margin-right: 10px;
-}
-
-.name_post{
-  float: left;
-  font-size: 16px;
-  margin: -3px 0 -5px 0;
-  font-weight: bold;
-}
-
-.data_post{
-  color: #BBB;
-  font-size: 14px;
-  margin: -7px 0 0 0;
-}
-
-.cont-post{
-  padding: 2%;
-  background: #075BD9;
-}
-
 .cont-post img{
   border-radius: 0;
   width: 100%;
@@ -131,11 +108,6 @@ textarea.form-control{
   float: right;
   top: 0;
   padding: 5px 8px 5px 8px;
-}
-
-.block img{
-  width: 7%;
-  height: 2%;
 }
 
 /*Estilo Demandas globais - lado direito*/

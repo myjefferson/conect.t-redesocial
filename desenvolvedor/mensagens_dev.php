@@ -52,7 +52,7 @@
                                                 <!--Oculta a tela de bem vindo-->
                                                 <script> $("#msm-welcome").hide(); </script>
 
-                                                <img src="fotos_dev/<?php echo$user_talking_dev['foto']; ?>" onerror=this.src="style_dev/img_dev/sem-perfil.png">
+                                                <img src="fotos_dev/<?php echo$user_talking_dev['foto']; ?>"  onerror="this.src='style_dev/img_dev/sem-perfil.png'">
                                                 <label id="nome-user"><?php echo$user_talking_dev['nome']; ?></label>
                                                 <?php }else{ 
                                                     $user_talking_cli = mysqli_fetch_assoc($query_user_cli);
@@ -61,7 +61,7 @@
                                                     <script> $("#msm-welcome").hide(); </script>
 
                                                     <label id="text_client">Cliente</label>
-                                                    <img src="fotos_dev/<?php echo$user_talking_cli['foto']; ?>" onerror=this.src="style_dev/img_dev/sem-perfil.png">
+                                                    <img src="../cliente/fotos_cli/<?php echo$user_talking_cli['foto']; ?>"  onerror="this.src='style_dev/img_dev/sem-perfil.png'">
                                                     <label id="nome-user"><?php echo$user_talking_cli['nome']; ?></label>
                                                     
                                                <?php } ?>
@@ -72,7 +72,6 @@
                                     </div>
 
                                     <div id="align-msm" class="list-mensagens">
-                                        <?php //include("sys_mensagem/list_msm_chat.php"); ?>
                                     </div>
 
                                      
@@ -122,7 +121,7 @@
                                                 if($row['type_user'] == "cli"){ ?>
                                                     <ul>                                     
                                                         <!--Pega o id do usuario atual-->
-                                                        <li><a id="user_select" href="?&type_user=<?php echo$row['type_user']; ?>&user=<?php echo$row['id_cli']; ?>"><b><img src="fotos_dev/<?php echo$foto; ?>" onerror=this.src="style_dev/img_dev/sem-perfil.png"><?php echo $nome; ?></b></a></li>  
+                                                        <li><a id="user_select" href="?&type_user=<?php echo$row['type_user']; ?>&user=<?php echo$row['id_cli']; ?>"><b><img src="../cliente/fotos_cli/<?php echo$foto; ?>" onerror="this.src='style_dev/img_dev/sem-perfil.png'"><?php echo $nome; ?></b></a></li>  
                                                     </ul>
                                                 <?php } 
                                             //}

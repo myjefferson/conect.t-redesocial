@@ -1,3 +1,7 @@
+body{
+  background: linear-gradient(#fff 30%, #ddd 100%) fixed;
+}
+
 .nav-item.show .nav-link, .nav-tabs .nav-link.active{
   background-color: rgba(20,80,60,.15) !important;
   border: 2px solid #168BFA !important;

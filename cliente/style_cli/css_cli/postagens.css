@@ -1,5 +1,15 @@
 /*Estilo conteudo da postagem*/
-  .card #img_postador{
+  #feed_posts{
+    border: none;
+    box-shadow: 0px 0px 5px rgba(30,30,30,.10000);
+  }
+
+  #feed_posts .card-header{
+    background: #fff;
+    border-color: #ddd; 
+  }
+
+  #feed_posts .card-header #img_postador{
     float: left;
     width: 40px;
     height: 40px;
@@ -8,24 +18,28 @@
     background: white;
   }
   
-  .name_post{
+  #feed_posts .name_post{
     float: left;
     font-size: 16px;
     margin: -3px 0 -5px 0;
     font-weight: bold;
+    color: #333;
   }
   
-  .data_post{
-    color: #E8E8E8;
+  #feed_posts .data_post{
+    color: #666;
     font-size: 14px;
     margin: -7px 0 0 0;
   }
   
-  .cont-post{
+  #feed_posts .cont-post{
     padding: 2%;
+    color: #555;
+    border: 0;
+    background: white;
   }
   
-  .cont-post img{
+  #feed_posts .cont-post img{
     border-radius: 10px;
     width: 100%;
     margin: 10px 0 8px 0;
@@ -40,10 +54,6 @@
   .block img{
     width: 7%;
     height: 2%;
-  }
-  
-  .card-header{
-    background-color: #1E2326;
   }
 
   #dev_text{
@@ -111,7 +121,7 @@
   text-align: center;
   margin: 5px 0 5px 0;
   font-size: 17px;
-  color: #999;
+  color: #ccc;
   font-weight: bold;
 }
 

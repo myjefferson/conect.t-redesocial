@@ -3,9 +3,17 @@ include("../../conexao_banco.php");
 
 if(isset($_GET['user'])){   
     $id_cli_enviou = $_GET['id_cli_enviou'];
+    
     $id_para = $_GET['user'];
+    $type_user = $_GET['type_user'];
 
-    $resultado = mysqli_query($conexao, "SELECT * FROM(SELECT * FROM chat WHERE (id_user_enviou = ".$id_cli_enviou." AND id_user_recebeu = '$id_para') OR (id_user_enviou = '$id_para' AND id_user_recebeu = ".$id_cli_enviou.") ORDER BY id DESC) sub ORDER BY id ASC ") or die("");
+    $resultado = $conexao->query("SELECT * FROM(SELECT * FROM chat WHERE (
+                                                                            (id_user_enviou = {$id_cli_enviou} AND tipo_user_enviou = 'cli') AND 
+                                                                            (id_user_recebeu = {$id_para} AND tipo_user_recebeu = '{$type_user}')
+                                                                         ) or ( 
+                                                                                (id_user_enviou = {$id_para} AND tipo_user_enviou = '{$type_user}') AND 
+                                                                                (id_user_recebeu = {$id_cli_enviou} AND tipo_user_recebeu = 'cli')
+                                                                              ) ORDER BY id DESC) sub ORDER BY id ASC ");
     $conta = mysqli_num_rows($resultado);
 
     if($conta <= 0){
@@ -13,12 +21,12 @@ if(isset($_GET['user'])){
     }else{
         while($row = mysqli_fetch_array($resultado)){
             
-            //se enviei mensagem
-            if($row['id_user_enviou'] == $id_cli_enviou){ ?>
+            //Enviei mensagem
+            if($row['id_user_enviou'] == $id_cli_enviou and $row['tipo_user_enviou'] == 'cli'){ ?>
                 <div align="right" id="right"><p><?php echo$row['mensagem']; ?></p></div>
             <?php }
                 //Não enviei mensagem esquerda
-                else if($row['id_user_enviou'] != $id_cli_enviou){ ?>
+                else if($row['id_user_enviou'] == $id_para and $row['tipo_user_enviou'] == $type_user){ ?>
                 <div id="left"><p><?php echo$row['mensagem']; ?></p></div>
             <?php } ?>                                                   
 <?php }}} ?>
