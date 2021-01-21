@@ -5,7 +5,9 @@
 </h2>
 
 
-`<p align="center"><a href="#techs">Tecnologias</a>&nbsp&nbsp<a href="#client">Conta Cliente</a>&nbsp&nbsp<a href="#dev">Conta Desenvolvedor</a>&nbsp&nbsp<!--<a href="#store"> CONEC.T Store &nbsp</a>--><a href="#guiauso">Guia de Uso</a></p>`
+```
+<p align="center"><a href="#techs">Tecnologias</a>&nbsp&nbsp<a href="#client">Conta Cliente</a>&nbsp&nbsp<a href="#dev">Conta Desenvolvedor</a>&nbsp&nbsp<!--<a href="#store"> CONEC.T Store &nbsp</a>--><a href="#guiauso">Guia de Uso</a></p>
+```
 
 
 > O projeto foi desenvolvido para realização do <b>Trabalho de Conclusão de Curso (TCC)</b> de Desenvolvimento de Sistemas
