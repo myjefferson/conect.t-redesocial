@@ -7,7 +7,7 @@
 
 > O projeto foi desenvolvido para realização do <b>Trabalho de Conclusão de Curso (TCC)</b> de Desenvolvimento de Sistemas
 
-<p>O Projeto tem o objetivo de reunir programadores e clientes que querem públicar assuntos e ideias de seus interesses.</p>
+<p>O Projeto tem o objetivo de reunir programadores e clientes que querem públicar assuntos e ideias de seus interesses, através de uma rede social.</p>
 
 <img src="icones/presentation/change_account.png">
 
@@ -38,15 +38,11 @@
 <li>Você vai precisar do Xampp em sua máquina.</li>
 
 <p>1. Clone o repositório na pasta <i>htdocs</i></p>
-```sh
-   git clone https://github.com/myjefferson/CONEC.T-RedeSocial.git
-```
+`git clone https://github.com/myjefferson/CONEC.T-RedeSocial.git`
 
 <p>2. Inicie o Xampp e habilite o Apache e o MySQL</p>
 <p>3. Acesse, no navegador, a aplicação web <i>phpMyAdmin</i></p>
-```sh
-localhost/phpmyadmin
-```
+`localhost/phpmyadmin`
 <p>4. importe o Banco de Dados - DB (conec.t), localizado na pasta do projeto</p>
 
 <hr/>
