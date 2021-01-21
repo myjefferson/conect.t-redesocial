@@ -54,6 +54,9 @@ git clone https://github.com/myjefferson/CONEC.T-RedeSocial.git
 localhost/phpmyadmin
 ```
 
-<p>4. importe o Banco de Dados - DB (conec.t), localizado na pasta do projeto</p>
+<p>4. Importe o Banco de Dados - DB (conec.t), localizado na pasta do projeto</p>
+<p>5. Agora é só acessar</p>
 
-<hr/>
+```
+localhost/CONEC.T-RedeSocial/
+```
