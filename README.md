@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css">
 <h2 align="center">
    <img src="icones/logo-black.png" width="280px">
-   <p>A Rede social da tecnologia.</p>
+   <p>A Rede social de tecnologia.</p>
 </h2>
 
 <p align="center"><a href="#techs">Tecnologias</a>&nbsp&nbsp<a href="#client">Conta Cliente</a>&nbsp&nbsp<a href="#dev">Conta Desenvolvedor</a>&nbsp&nbsp<!--<a href="#store"> CONEC.T Store &nbsp</a>--><a href="#guiauso">Guia de Uso</a></p>
