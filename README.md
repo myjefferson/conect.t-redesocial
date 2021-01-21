@@ -3,7 +3,12 @@
    <img src="icones/logo-black.png" width="280px">
    <p>A Rede social que reúne desenvolvedores e clientes.</p>
 </h2>
-`<p align="center"><a href="#techs">Tecnologias</a>&nbsp&nbsp<a href="#client">Conta Cliente</a>&nbsp&nbsp<a href="#dev">Conta Desenvolvedor</a>&nbsp&nbsp<!--<a href="#store"> CONEC.T Store &nbsp</a>--><a href="#guiauso">Guia de Uso</a></p>`
+
+
+<div width="100%" style="background: red">
+<p align="center"><a href="#techs">Tecnologias</a>&nbsp&nbsp<a href="#client">Conta Cliente</a>&nbsp&nbsp<a href="#dev">Conta Desenvolvedor</a>&nbsp&nbsp<!--<a href="#store"> CONEC.T Store &nbsp</a>--><a href="#guiauso">Guia de Uso</a></p>
+</div>
+
 
 > O projeto foi desenvolvido para realização do <b>Trabalho de Conclusão de Curso (TCC)</b> de Desenvolvimento de Sistemas
 
@@ -35,7 +40,9 @@
 
 
 <h1 id="guiauso">Guia de Uso</h1>
-<li>Você vai precisar do Xampp em sua máquina.</li>
+<ul>
+   <li>Você vai precisar do Xampp em sua máquina.</li>
+</ul>
 
 <p>1. Clone o repositório na pasta <i>htdocs</i></p>
 
