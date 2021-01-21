@@ -3,7 +3,7 @@
    <img src="icones/logo-black.png" width="280px">
    <p>A Rede social que reúne desenvolvedores e clientes.</p>
 </h2>
-<p align="center"><a href="#techs">Tecnologias</a>&nbsp&nbsp<a href="#client">Conta Cliente</a>&nbsp&nbsp<a href="#dev">Conta Desenvolvedor</a>&nbsp&nbsp<!--<a href="#store"> CONEC.T Store &nbsp</a>--><a href="#guiauso">Guia de Uso</a></p>
+`<p align="center"><a href="#techs">Tecnologias</a>&nbsp&nbsp<a href="#client">Conta Cliente</a>&nbsp&nbsp<a href="#dev">Conta Desenvolvedor</a>&nbsp&nbsp<!--<a href="#store"> CONEC.T Store &nbsp</a>--><a href="#guiauso">Guia de Uso</a></p>`
 
 > O projeto foi desenvolvido para realização do <b>Trabalho de Conclusão de Curso (TCC)</b> de Desenvolvimento de Sistemas
 
@@ -38,11 +38,18 @@
 <li>Você vai precisar do Xampp em sua máquina.</li>
 
 <p>1. Clone o repositório na pasta <i>htdocs</i></p>
-`git clone https://github.com/myjefferson/CONEC.T-RedeSocial.git`
+
+```
+git clone https://github.com/myjefferson/CONEC.T-RedeSocial.git
+```
 
 <p>2. Inicie o Xampp e habilite o Apache e o MySQL</p>
 <p>3. Acesse, no navegador, a aplicação web <i>phpMyAdmin</i></p>
-`localhost/phpmyadmin`
+
+```
+localhost/phpmyadmin
+```
+
 <p>4. importe o Banco de Dados - DB (conec.t), localizado na pasta do projeto</p>
 
 <hr/>
