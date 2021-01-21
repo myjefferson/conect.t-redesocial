@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css">
 <h2 align="center">
-   <img src="icones/logo-black.png" width="300px">
+   <img src="icones/logo-black.png" width="280px">
    <p>A Rede social que reúne desenvolvedores e clientes.</p>
 </h2>
-<p align="center"><a href="#techs"> Tecnologias &nbsp</a><a href="#client"> Conta Cliente &nbsp</a><a href="#dev"> Conta Desenvolvedor &nbsp</a><!--<a href="#store"> CONEC.T Store &nbsp</a>--><a href="#guiauso">Guia de Uso</a></p>
-<hr/>
+<p align="center"><a href="#techs">Tecnologias</a>&nbsp&nbsp<a href="#client">Conta Cliente</a>&nbsp&nbsp<a href="#dev">Conta Desenvolvedor</a>&nbsp&nbsp<!--<a href="#store"> CONEC.T Store &nbsp</a>--><a href="#guiauso">Guia de Uso</a></p>
+
 > O projeto foi desenvolvido para realização do <b>Trabalho de Conclusão de Curso (TCC)</b> de Desenvolvimento de Sistemas
 
 <p>O Projeto tem o objetivo de reunir programadores e clientes que querem públicar assuntos e ideias de seus interesses.</p>
@@ -34,17 +34,19 @@
 <!--<h1 id="store">CONEC.T Store</h1>-->
 
 
-<h1 id="guiauso">Guia de Instalação</h1>
+<h1 id="guiauso">Guia de Uso</h1>
 <li>Você vai precisar do Xampp em sua máquina.</li>
 
 <p>1. Clone o repositório na pasta <i>htdocs</i></p>
-```bash
+```sh
    git clone https://github.com/myjefferson/CONEC.T-RedeSocial.git
 ```
 
 <p>2. Inicie o Xampp e habilite o Apache e o MySQL</p>
 <p>3. Acesse, no navegador, a aplicação web <i>phpMyAdmin</i></p>
-```bash
+```sh
 localhost/phpmyadmin
 ```
 <p>4. importe o Banco de Dados - DB (conec.t), localizado na pasta do projeto</p>
+
+<hr/>
